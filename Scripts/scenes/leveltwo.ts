@@ -24,7 +24,7 @@ module scenes {
             
             // add the Back button to the MENU scene
             this._backButton = new objects.Button(
-                "BackButton",
+                "LevelOneButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 180, false);
             this.addChild(this._backButton);
@@ -34,7 +34,7 @@ module scenes {
             
             // add the Next button to the MENU scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "LevelThreeButton",
                 config.Screen.CENTER_X + 50,
                 config.Screen.CENTER_Y + 180, false);
             this.addChild(this._nextButton);

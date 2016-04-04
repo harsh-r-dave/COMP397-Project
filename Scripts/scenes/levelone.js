@@ -23,7 +23,7 @@ var scenes;
             // Back Button event listener
             this._backButton.on("click", this._backButtonClick, this);
             // add the Next button to the MENU scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 50, config.Screen.CENTER_Y + 180, false);
+            this._nextButton = new objects.Button("LevelTwoButton", config.Screen.CENTER_X + 50, config.Screen.CENTER_Y + 180, false);
             this.addChild(this._nextButton);
             // Next Button event listener
             this._nextButton.on("click", this._nextButtonClick, this);

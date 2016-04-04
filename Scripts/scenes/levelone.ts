@@ -34,7 +34,7 @@ module scenes {
             
             // add the Next button to the MENU scene
             this._nextButton = new objects.Button(
-                "NextButton",
+                "LevelTwoButton",
                 config.Screen.CENTER_X + 50,
                 config.Screen.CENTER_Y + 180, false);
             this.addChild(this._nextButton);
