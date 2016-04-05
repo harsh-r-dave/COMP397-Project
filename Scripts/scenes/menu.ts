@@ -3,6 +3,7 @@ module scenes {
     export class Menu extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _menuLabel: objects.Label;
+        private _background: createjs.Bitmap;
         private _playButton: objects.Button;
         private _instructions: objects.Button;
         
@@ -15,11 +16,15 @@ module scenes {
         
         // Start Method
         public start(): void {
+            // Add background to the scene
+            this._background = new createjs.Bitmap(assets.getResult("Menu_bg"));
+            this.addChild(this._background);
+            
             //Add Menu Label
             this._menuLabel = new objects.Label(
-                "MENU SCENE", "60px Consolas",
-                "#000000",
-                config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
+                "Earth Defender", "50px Frijole",
+                "#ffff00",
+                config.Screen.CENTER_X - 100, config.Screen.CENTER_Y, true);
             this.addChild(this._menuLabel);
             
             

@@ -15,8 +15,11 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Menu.prototype.start = function () {
+            // Add background to the scene
+            this._background = new createjs.Bitmap(assets.getResult("Menu_bg"));
+            this.addChild(this._background);
             //Add Menu Label
-            this._menuLabel = new objects.Label("MENU SCENE", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
+            this._menuLabel = new objects.Label("Earth Defender", "50px Frijole", "#ffff00", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y, true);
             this.addChild(this._menuLabel);
             // add the Play button to the MENU scene
             this._playButton = new objects.Button("PlayNowButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 180, false);

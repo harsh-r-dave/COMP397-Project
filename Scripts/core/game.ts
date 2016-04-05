@@ -20,6 +20,7 @@ var end: scenes.End;
 
 var assetData: objects.Asset[] = [
     // Add your Assets here
+    { id: "Menu_bg", src: "../../Assets/images/menu_bg.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
