@@ -1,11 +1,8 @@
 module scenes {
     export class LevelOne extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _lavelOneLabel: objects.Label;
-        private _backButton: objects.Button;
-        private _nextButton: objects.Button;
-
         private _background: objects.LevelOneBackground;
+        private _player: objects.LevelOnePlayer;
 
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -20,6 +17,10 @@ module scenes {
             this._background = new objects.LevelOneBackground();
             this.addChild(this._background);
             
+            // add player to theh scene
+            this._player = new objects.LevelOnePlayer();
+            this.addChild(this._player);
+            
             // add this scene to the global stage container
             stage.addChild(this);
         }
@@ -27,6 +28,7 @@ module scenes {
         // MENU Scene updates here
         public update(): void {
             this._background.update();
+            this._player.update();
         }
 
 

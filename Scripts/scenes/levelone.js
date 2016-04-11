@@ -17,12 +17,16 @@ var scenes;
             // add background to the scene
             this._background = new objects.LevelOneBackground();
             this.addChild(this._background);
+            // add player to theh scene
+            this._player = new objects.LevelOnePlayer();
+            this.addChild(this._player);
             // add this scene to the global stage container
             stage.addChild(this);
         };
         // MENU Scene updates here
         LevelOne.prototype.update = function () {
             this._background.update();
+            this._player.update();
         };
         return LevelOne;
     })(objects.Scene);
