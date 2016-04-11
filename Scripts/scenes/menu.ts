@@ -24,7 +24,7 @@ module scenes {
             this._menuLabel = new objects.Label(
                 "Earth Defender", "50px Frijole",
                 "#ffff00",
-                config.Screen.CENTER_X - 100, config.Screen.CENTER_Y, true);
+                50, config.Screen.CENTER_Y, false);
             this.addChild(this._menuLabel);
             
             

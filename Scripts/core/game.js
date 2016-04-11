@@ -16,7 +16,14 @@ var levelThree;
 var end;
 var assetData = [
     // Add your Assets here
-    { id: "Menu_bg", src: "../../Assets/images/menu_bg.png" },
+    { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },
+    { id: "Desert", src: "../../Assets/images/desert.jpg" },
+    { id: "PlayerLevelOne", src: "../../Assets/images/player_level1.png" },
+    { id: "LevelOneEnemy1", src: "../../Assets/images/enemy1_level1.png" },
+    { id: "LevelOneEnemy2", src: "../../Assets/images/enemy2_level1.png" },
+    { id: "LevelOneEnemy3", src: "../../Assets/images/enemy3_level1.png" },
+    { id: "Stone", src: "../../Assets/images/stone.png" },
+    { id: "Fuel", src: "../../Assets/images/gas.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },

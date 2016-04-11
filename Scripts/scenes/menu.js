@@ -19,7 +19,7 @@ var scenes;
             this._background = new createjs.Bitmap(assets.getResult("Menu_bg"));
             this.addChild(this._background);
             //Add Menu Label
-            this._menuLabel = new objects.Label("Earth Defender", "50px Frijole", "#ffff00", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y, true);
+            this._menuLabel = new objects.Label("Earth Defender", "50px Frijole", "#ffff00", 50, config.Screen.CENTER_Y, false);
             this.addChild(this._menuLabel);
             // add the Play button to the MENU scene
             this._playButton = new objects.Button("PlayNowButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 180, false);

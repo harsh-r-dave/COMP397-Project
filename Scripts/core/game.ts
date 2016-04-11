@@ -20,7 +20,14 @@ var end: scenes.End;
 
 var assetData: objects.Asset[] = [
     // Add your Assets here
-    { id: "Menu_bg", src: "../../Assets/images/menu_bg.png" },
+    { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },          // menu screen - background images
+    { id: "Desert", src: "../../Assets/images/desert.jpg" },            // level one - background
+    { id: "PlayerLevelOne", src: "../../Assets/images/player_level1.png" },     // level one - player
+    { id: "LevelOneEnemy1", src: "../../Assets/images/enemy1_level1.png" },     // level one - enemy
+    { id: "LevelOneEnemy2", src: "../../Assets/images/enemy2_level1.png" },     // level one - enemy
+    { id: "LevelOneEnemy3", src: "../../Assets/images/enemy3_level1.png" },     // level one - enemy
+    { id: "Stone", src: "../../Assets/images/stone.png" },                      // level one - obstacle
+    { id: "Fuel", src: "../../Assets/images/gas.png" },                         // level one - collector
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
