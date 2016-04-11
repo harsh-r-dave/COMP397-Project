@@ -17,6 +17,9 @@ var scenes;
             // add background to the scene
             this._background = new objects.LevelOneBackground();
             this.addChild(this._background);
+            // add obstacle to the scene
+            this._obstacle = new objects.LevelOneObstacle;
+            this.addChild(this._obstacle);
             // add enemy to the scene
             this._enemyOne = new objects.LevelOneEnemy("LevelOneEnemy1");
             this.addChild(this._enemyOne);
@@ -35,6 +38,8 @@ var scenes;
             //  update enemy
             this._enemyOne.update();
             this._enemyTwo.update();
+            // update obstacle
+            this._obstacle.update();
         };
         return LevelOne;
     })(objects.Scene);
