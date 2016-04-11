@@ -20,6 +20,9 @@ var scenes;
             // add obstacle to the scene
             this._obstacle = new objects.LevelOneObstacle;
             this.addChild(this._obstacle);
+            // add collector to the scene
+            this._collector = new objects.LevelOneCollector();
+            this.addChild(this._collector);
             // add enemy to the scene
             this._enemyOne = new objects.LevelOneEnemy("LevelOneEnemy1");
             this.addChild(this._enemyOne);
@@ -40,6 +43,8 @@ var scenes;
             this._enemyTwo.update();
             // update obstacle
             this._obstacle.update();
+            // update collector
+            this._collector.update();
         };
         return LevelOne;
     })(objects.Scene);

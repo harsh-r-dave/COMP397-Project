@@ -8,6 +8,7 @@ module scenes {
         private _enemyTwo: objects.LevelOneEnemy;
 
         private _obstacle: objects.LevelOneObstacle;
+        private _collector: objects.LevelOneCollector;
 
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -26,6 +27,9 @@ module scenes {
             this._obstacle = new objects.LevelOneObstacle;
             this.addChild(this._obstacle);
 
+            // add collector to the scene
+            this._collector = new objects.LevelOneCollector();
+            this.addChild(this._collector);
 
             // add enemy to the scene
             this._enemyOne = new objects.LevelOneEnemy("LevelOneEnemy1");
@@ -49,9 +53,12 @@ module scenes {
             //  update enemy
             this._enemyOne.update();
             this._enemyTwo.update();
-            
+
             // update obstacle
             this._obstacle.update();
+
+            // update collector
+            this._collector.update();
         }
 
 

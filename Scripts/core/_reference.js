@@ -9,6 +9,7 @@
 /// <reference path="../objects/leveloneplayer.ts" />
 /// <reference path="../objects/leveloneenemy.ts" />
 /// <reference path="../objects/leveloneobstacle.ts" />
+/// <reference path="../objects/levelonecollector.ts" />
 /// <reference path="../scenes/end.ts" />
 /// <reference path="../scenes/levelthree.ts" />
 /// <reference path="../scenes/leveltwo.ts" />
