@@ -10,6 +10,11 @@ module scenes {
         private _obstacle: objects.LevelOneObstacle;
         private _collector: objects.LevelOneCollector;
 
+        private _targetLabel: objects.Label;
+        private _livesLabel: objects.Label;
+
+        private _collision: managers.LevelOneCollision;
+
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
@@ -41,6 +46,17 @@ module scenes {
             this._player = new objects.LevelOnePlayer();
             this.addChild(this._player);
 
+            // Score Label
+            this._targetLabel = new objects.Label("Target: 5000/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
+            this.addChild(this._targetLabel);
+
+            // Lives Label
+            this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 480, 5, false);
+            this.addChild(this._livesLabel);
+
+            // add collision manager to the scene
+            this._collision = new managers.LevelOneCollision(this._player);
+
             // add this scene to the global stage container
             stage.addChild(this);
         }
@@ -50,15 +66,19 @@ module scenes {
             this._background.update();
             this._player.update();
 
-            //  update enemy
+            // check if enemy is colliding with player and update it
             this._enemyOne.update();
+            this._collision.check(this._enemyOne);
             this._enemyTwo.update();
+            this._collision.check(this._enemyTwo);
 
-            // update obstacle
+            // check if obstacle is colliding with player and update it
             this._obstacle.update();
-
-            // update collector
+            this._collision.check(this._obstacle);
+            
+            // check if collector is colliding with player and update it
             this._collector.update();
+            this._collision.check(this._collector);
         }
 
 
