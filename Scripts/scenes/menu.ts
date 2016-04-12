@@ -6,6 +6,7 @@ module scenes {
         private _background: createjs.Bitmap;
         private _playButton: objects.Button;
         private _instructions: objects.Button;
+        private _closeButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -48,6 +49,15 @@ module scenes {
             // Instructions Button event listener
             this._instructions.on("click", this._instructionsButtonClick, this);
             
+            // add the Close button to the MENU scene
+            this._closeButton = new objects.Button(
+                "CloseButton",
+                570, 5, false);
+            this.addChild(this._closeButton);
+            
+            // Close Button event listener
+            this._closeButton.on("click", this._closeButtonClick, this);
+            
             // add this scene to the global stage container
             stage.addChild(this);
         }
@@ -72,6 +82,12 @@ module scenes {
             // Switch to the INSTRUCTIONS Scene
             scene = config.Scene.INSTRUCTIONS;
             changeScene();
+        }
+        
+        // CLOSE Button click event handler
+        private _closeButtonClick(event: createjs.MouseEvent) {
+            // Switch to the GOODBYE PAGE
+            window.location.href = "../../goodbye.html";
         }
     }
 }

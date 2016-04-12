@@ -38,6 +38,7 @@ var assetData: objects.Asset[] = [
     { id: "NextButton", src: "../../Assets/images/NextButton.png" },
     { id: "PlayNowButton", src: "../../Assets/images/playNow.png" },
     { id: "InstructionsButton", src: "../../Assets/images/help.png" },
+    { id: "CloseButton", src: "../../Assets/images/closeButton.png" }
 ];
 
 function preload() {
