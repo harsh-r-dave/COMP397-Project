@@ -3,6 +3,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _sea: objects.Sea;
         private _playerleveltwo: objects.LevelTwoPLayer;
+        private _island: objects.Island;
 
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -17,7 +18,11 @@ module scenes {
             //Add sea
             this._sea = new objects.Sea();
             this.addChild(this._sea);
-                        
+
+            //Added island in the scene
+            this._island = new objects.Island();
+            this.addChild(this._island);
+
             //added PLAYEr to the scene
             this._playerleveltwo = new objects.LevelTwoPLayer();
             this.addChild(this._playerleveltwo);
@@ -29,6 +34,10 @@ module scenes {
         // MENU Scene updates here
         public update(): void {
             this._sea.update();
+            this._island.update();
+
+            this._playerleveltwo.update();
+
         }
         
         

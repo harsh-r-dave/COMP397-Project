@@ -17,6 +17,9 @@ var scenes;
             //Add sea
             this._sea = new objects.Sea();
             this.addChild(this._sea);
+            //Added island in the scene
+            this._island = new objects.Island();
+            this.addChild(this._island);
             //added PLAYEr to the scene
             this._playerleveltwo = new objects.LevelTwoPLayer();
             this.addChild(this._playerleveltwo);
@@ -26,6 +29,8 @@ var scenes;
         // MENU Scene updates here
         LevelTwo.prototype.update = function () {
             this._sea.update();
+            this._island.update();
+            this._playerleveltwo.update();
         };
         return LevelTwo;
     })(objects.Scene);

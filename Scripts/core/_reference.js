@@ -11,6 +11,7 @@
 /// <reference path="../objects/leveloneobstacle.ts" />
 /// <reference path="../objects/levelonecollector.ts" />
 /// <reference path="../objects/sea.ts" />
+/// <reference path="../objects/island.ts" />
 /// <reference path="../objects/leveltwoplayer.ts" />
 /// <reference path="../managers/levelonecollision.ts" />
 /// <reference path="../scenes/end.ts" />
