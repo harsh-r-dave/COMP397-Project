@@ -17,6 +17,7 @@
 /// <reference path="../objects/leveltwoplayer.ts" />
 /// <reference path="../objects/leveltwoenemy.ts" />
 
+/// <reference path="../managers/scoreboard.ts" />
 /// <reference path="../managers/levelonecollision.ts" />
 /// <reference path="../managers/leveltwocollision.ts" />
 

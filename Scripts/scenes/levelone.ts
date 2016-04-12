@@ -24,6 +24,10 @@ module scenes {
 
         // Start Method
         public start(): void {
+            // initialize scoreboard
+            scoreboard.setLevelOneLives(5);
+            scoreboard.setLevelOneTarget(0);
+            
             // add background to the scene
             this._background = new objects.LevelOneBackground();
             this.addChild(this._background);
@@ -47,11 +51,11 @@ module scenes {
             this.addChild(this._player);
 
             // Score Label
-            this._targetLabel = new objects.Label("Target: 5000/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: 0/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
 
             // Lives Label
-            this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 480, 5, false);
+            this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 450, 5, false);
             this.addChild(this._livesLabel);
 
             // add collision manager to the scene
@@ -75,13 +79,29 @@ module scenes {
             // check if obstacle is colliding with player and update it
             this._obstacle.update();
             this._collision.check(this._obstacle);
-            
+
             // check if collector is colliding with player and update it
             this._collector.update();
             this._collision.check(this._collector);
+
+           this._updateScore();
+           
+           if(scoreboard.getLevelOneLives() <= 0) {
+               scene = config.Scene.END;
+               changeScene();
+           }
+           
+           if(scoreboard.getLevelOneTarget() >= 750) {
+               scene = config.Scene.LEVELTWO;
+               changeScene();
+           }
         }
 
-
+        // method to update scoreboard
+        private _updateScore(): void {
+            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/5000 ltr";
+            this._livesLabel.text = "Lives: " + scoreboard.getLevelOneLives();
+        }
         //EVENT HANDLERS ++++++++++++++++++++
     }
 }

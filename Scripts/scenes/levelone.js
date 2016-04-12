@@ -14,6 +14,9 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         LevelOne.prototype.start = function () {
+            // initialize scoreboard
+            scoreboard.setLevelOneLives(5);
+            scoreboard.setLevelOneTarget(0);
             // add background to the scene
             this._background = new objects.LevelOneBackground();
             this.addChild(this._background);
@@ -32,10 +35,10 @@ var scenes;
             this._player = new objects.LevelOnePlayer();
             this.addChild(this._player);
             // Score Label
-            this._targetLabel = new objects.Label("Target: 5000/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: 0/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
             // Lives Label
-            this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 480, 5, false);
+            this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 450, 5, false);
             this.addChild(this._livesLabel);
             // add collision manager to the scene
             this._collision = new managers.LevelOneCollision(this._player);
@@ -57,6 +60,20 @@ var scenes;
             // check if collector is colliding with player and update it
             this._collector.update();
             this._collision.check(this._collector);
+            this._updateScore();
+            if (scoreboard.getLevelOneLives() <= 0) {
+                scene = config.Scene.END;
+                changeScene();
+            }
+            if (scoreboard.getLevelOneTarget() >= 750) {
+                scene = config.Scene.LEVELTWO;
+                changeScene();
+            }
+        };
+        // method to update scoreboard
+        LevelOne.prototype._updateScore = function () {
+            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/5000 ltr";
+            this._livesLabel.text = "Lives: " + scoreboard.getLevelOneLives();
         };
         return LevelOne;
     })(objects.Scene);

@@ -25,16 +25,19 @@ var managers;
                     switch (object.name) {
                         case "LevelOneEnemy":
                             object.visible = false;
+                            scoreboard.removeLevelOneLives(1);
                             console.log("enemy hit");
                             //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
                             break;
                         case "LevelOneObstacle":
                             object.visible = false;
+                            scoreboard.removeLevelOneLives(1);
                             console.log("obstacle hit");
                             //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
                             break;
                         case "LevelOneCollector":
                             object.visible = false;
+                            scoreboard.addLevelOneScore(250);
                             console.log("gas hit");
                             //createjs.Sound.play("Collect", 0, 0, 0, 0, 0.5, 0);
                             break;
