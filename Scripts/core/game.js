@@ -24,6 +24,8 @@ var assetData = [
     { id: "LevelOneEnemy3", src: "../../Assets/images/enemy3_level1.png" },
     { id: "Stone", src: "../../Assets/images/stone.png" },
     { id: "Fuel", src: "../../Assets/images/gas.png" },
+    { id: "sea", src: "../../Assets/images/sea.png" },
+    { id: "player_level2", src: "../../Assets/images/player_level2.png" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },

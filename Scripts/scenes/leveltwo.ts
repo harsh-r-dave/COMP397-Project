@@ -2,6 +2,8 @@ module scenes {
     export class LevelTwo extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _sea: objects.Sea;
+        private _playerleveltwo: objects.LevelTwoPLayer;
+
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -15,6 +17,11 @@ module scenes {
             //Add sea
             this._sea = new objects.Sea();
             this.addChild(this._sea);
+                        
+            //added PLAYEr to the scene
+            this._playerleveltwo = new objects.LevelTwoPLayer();
+            this.addChild(this._playerleveltwo);
+
             // add this scene to the global stage container
             stage.addChild(this);
         }
