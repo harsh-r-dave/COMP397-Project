@@ -10,6 +10,10 @@ var scenes;
         // CONSTRUCTOR ++++++++++++++++++++++
         function LevelTwo() {
             _super.call(this);
+            //Initializing target
+            this.target = 0;
+            //Initialize Delay
+            this._delay = 0;
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
@@ -30,12 +34,15 @@ var scenes;
             //added PLAYEr to the scene
             this._playerleveltwo = new objects.LevelTwoPlayer();
             this.addChild(this._playerleveltwo);
+            // Score Label
+            this._targetLabel = new objects.Label("Target: " + this.target + "/300 kms", "30px Frijole", "#FFFF00", 5, 5, false);
+            this.addChild(this._targetLabel);
             // add collision manager to the scene
             this._collision = new managers.LevelTwoCollision(this._playerleveltwo);
             // add this scene to the global stage container
             stage.addChild(this);
         };
-        // MENU Scene updates here
+        // level 2 Scene updates here
         LevelTwo.prototype.update = function () {
             //update sea
             this._sea.update();
@@ -50,6 +57,16 @@ var scenes;
             this._collision.check(this._enemyThree);
             //update player
             this._playerleveltwo.update();
+            //update target
+            if (this._delay >= 45) {
+                this.target = this.target + 1;
+                this._delay = 0;
+            }
+            else {
+                this._delay += 1;
+            }
+            //update labels
+            this._targetLabel.text = "Target: " + this.target + "/300 kms";
         };
         return LevelTwo;
     })(objects.Scene);

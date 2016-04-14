@@ -2,6 +2,7 @@ module objects {
     export class LevelTwoEnemy extends objects.GameObject {
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++
         private _type: string;
+        private _target: Number = 0;
 
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++
         constructor(enemyType: string) {
@@ -24,19 +25,38 @@ module objects {
         protected _reset(value: number): void {
             this.visible = true;
             // behaviour of objects
-            console.log(this._type);
             if (this._type == "LevelTwoEnemy1") {
-                this._speed.x = Math.floor(Math.random() * 2) + 6;
+                if (this._target < 100) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 6;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             else if (this._type == "LevelTwoEnemy2") {
-                this._speed.x = Math.floor(Math.random() * 2) + 6;
+                if ((this._target >= 100) && (this._target < 200)) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 6;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             else if (this._type == "LevelTwoEnemy3") {
-                this._speed.x = Math.floor(Math.random() * 2) + 8;
+                if (this._target >= 200) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 8;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             // location of objects
             this.y = Math.floor(Math.random() * this._bottomBounds);
-            this.x = value;
         }
 
 
@@ -44,6 +64,7 @@ module objects {
         public update(): void {
             // scroll the enemy
             this.x += this._speed.x;
+            this._target = levelTwo.target;
             this._checkBounds(this._rightBounds);
         }
     }

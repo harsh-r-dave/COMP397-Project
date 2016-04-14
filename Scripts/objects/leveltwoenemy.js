@@ -10,6 +10,7 @@ var objects;
         // CONSTRUCTOR METHOD +++++++++++++++++++++++++
         function LevelTwoEnemy(enemyType) {
             _super.call(this, enemyType);
+            this._target = 0;
             this._type = enemyType;
             this._reset(this._leftBounds);
             this.name = "LevelTwoEnemy";
@@ -25,24 +26,44 @@ var objects;
         LevelTwoEnemy.prototype._reset = function (value) {
             this.visible = true;
             // behaviour of objects
-            console.log(this._type);
             if (this._type == "LevelTwoEnemy1") {
-                this._speed.x = Math.floor(Math.random() * 2) + 6;
+                if (this._target < 100) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 6;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             else if (this._type == "LevelTwoEnemy2") {
-                this._speed.x = Math.floor(Math.random() * 2) + 6;
+                if ((this._target >= 100) && (this._target < 200)) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 6;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             else if (this._type == "LevelTwoEnemy3") {
-                this._speed.x = Math.floor(Math.random() * 2) + 8;
+                if (this._target >= 200) {
+                    this._speed.x = Math.floor(Math.random() * 2) + 8;
+                    this.x = value;
+                }
+                else {
+                    this._speed.x = 0;
+                    this.x = this._rightBounds;
+                }
             }
             // location of objects
             this.y = Math.floor(Math.random() * this._bottomBounds);
-            this.x = value;
         };
         // PUBLIC METHODS ++++++++++++++++++++++++++++++
         LevelTwoEnemy.prototype.update = function () {
             // scroll the enemy
             this.x += this._speed.x;
+            this._target = levelTwo.target;
             this._checkBounds(this._rightBounds);
         };
         return LevelTwoEnemy;

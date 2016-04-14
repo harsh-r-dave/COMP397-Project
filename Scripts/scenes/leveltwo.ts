@@ -7,12 +7,23 @@ module scenes {
         private _enemyOne: objects.LevelTwoEnemy;
         private _enemyTwo: objects.LevelTwoEnemy;
         private _enemyThree: objects.LevelTwoEnemy;
+        private _targetLabel: objects.Label;
+        private _targetString: string;
+        private _delay: number;
 
         private _collision: managers.LevelTwoCollision;
         
+        //PUBLIC INSTANCE
+        public target: number;
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
+            
+            //Initializing target
+            this.target = 0;
+            
+            //Initialize Delay
+            this._delay = 0;
         }
         
         // PUBLIC METHODS +++++++++++++++++++++
@@ -39,6 +50,10 @@ module scenes {
             this._playerleveltwo = new objects.LevelTwoPlayer();
             this.addChild(this._playerleveltwo);
 
+            // Score Label
+            this._targetLabel = new objects.Label("Target: "+ this.target +"/300 kms", "30px Frijole", "#FFFF00", 5, 5, false);
+            this.addChild(this._targetLabel);
+            
             // add collision manager to the scene
             this._collision = new managers.LevelTwoCollision(this._playerleveltwo);
 
@@ -46,7 +61,7 @@ module scenes {
             stage.addChild(this);
         }
 
-        // MENU Scene updates here
+        // level 2 Scene updates here
         public update(): void {
             //update sea
             this._sea.update();
@@ -64,6 +79,19 @@ module scenes {
             
             //update player
             this._playerleveltwo.update();
+            
+            //update target
+            if(this._delay >= 45) {
+                this.target = this.target + 1;
+                this._delay = 0;
+            }
+            else{
+                this._delay += 1;
+            }
+            
+                        
+            //update labels
+            this._targetLabel.text = "Target: "+ this.target +"/300 kms";
 
         }
         
