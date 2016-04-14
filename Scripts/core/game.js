@@ -14,6 +14,8 @@ var levelOne;
 var levelTwo;
 var levelThree;
 var end;
+var levelOneEnd;
+var levelTwoEnd;
 var assetData = [
     // Add your Assets here
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },
@@ -117,12 +119,26 @@ function changeScene() {
             currentScene = levelOne;
             console.log("Starting LEVEL ONE Scene");
             break;
+        case config.Scene.LEVELONEEND:
+            // show the LEVEL ONE scene
+            stage.removeAllChildren();
+            levelOneEnd = new scenes.LevelOneEnd();
+            currentScene = levelOneEnd;
+            console.log("Starting LEVEL ONE END Scene");
+            break;
         case config.Scene.LEVELTWO:
             // show the LEVEL TWO scene
             stage.removeAllChildren();
             levelTwo = new scenes.LevelTwo();
             currentScene = levelTwo;
             console.log("Starting LEVEL TWO Scene");
+            break;
+        case config.Scene.LEVELTWOEND:
+            // show the LEVEL TWO END scene
+            stage.removeAllChildren();
+            levelTwoEnd = new scenes.LevelTwoEnd();
+            currentScene = levelTwoEnd;
+            console.log("Starting LEVEL TWO END Scene");
             break;
         case config.Scene.LEVELTHREE:
             // show the LEVEL THREE scene

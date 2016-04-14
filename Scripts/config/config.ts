@@ -9,6 +9,8 @@
         public static LEVELTWO: number = 4;
         public static LEVELTHREE: number = 5;
         public static END: number = 6;
+        public static LEVELONEEND: number = 7;
+        public static LEVELTWOEND: number = 8;
     }
     
     

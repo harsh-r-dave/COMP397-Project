@@ -34,6 +34,7 @@ module managers {
                         case "LevelTwoEnemy":
                             object.visible = false;
                             console.log("enemy hit");
+                            levelTwo.lives = levelTwo.lives - 1;
                             //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
                             
                             break;

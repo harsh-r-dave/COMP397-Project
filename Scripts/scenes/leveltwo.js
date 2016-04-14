@@ -12,6 +12,8 @@ var scenes;
             _super.call(this);
             //Initializing target
             this.target = 0;
+            //Initialize lives
+            this.lives = 5;
             //Initialize Delay
             this._delay = 0;
         }
@@ -37,6 +39,9 @@ var scenes;
             // Score Label
             this._targetLabel = new objects.Label("Target: " + this.target + "/300 kms", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
+            // Lives Label
+            this._livesLabel = new objects.Label("lives: " + this.lives, "30px Frijole", "#FFFF00", 480, 5, false);
+            this.addChild(this._livesLabel);
             // add collision manager to the scene
             this._collision = new managers.LevelTwoCollision(this._playerleveltwo);
             // add this scene to the global stage container
@@ -44,6 +49,18 @@ var scenes;
         };
         // level 2 Scene updates here
         LevelTwo.prototype.update = function () {
+            // check target and change scene if target fulfilled
+            if (this.target >= 300) {
+                // change scene
+                scene = config.Scene.LEVELTHREE;
+                changeScene();
+            }
+            //check lives
+            if (this.lives <= 0) {
+                // change scene
+                scene = config.Scene.LEVELONEEND;
+                changeScene();
+            }
             //update sea
             this._sea.update();
             //update island
@@ -67,6 +84,7 @@ var scenes;
             }
             //update labels
             this._targetLabel.text = "Target: " + this.target + "/300 kms";
+            this._livesLabel.text = "lives: " + this.lives;
         };
         return LevelTwo;
     })(objects.Scene);
