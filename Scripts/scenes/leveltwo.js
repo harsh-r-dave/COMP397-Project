@@ -20,16 +20,35 @@ var scenes;
             //Added island in the scene
             this._island = new objects.Island();
             this.addChild(this._island);
+            // add enemy to the scene
+            this._enemyOne = new objects.LevelTwoEnemy("LevelTwoEnemy1");
+            this.addChild(this._enemyOne);
+            this._enemyTwo = new objects.LevelTwoEnemy("LevelTwoEnemy2");
+            this.addChild(this._enemyTwo);
+            this._enemyThree = new objects.LevelTwoEnemy("LevelTwoEnemy3");
+            this.addChild(this._enemyThree);
             //added PLAYEr to the scene
-            this._playerleveltwo = new objects.LevelTwoPLayer();
+            this._playerleveltwo = new objects.LevelTwoPlayer();
             this.addChild(this._playerleveltwo);
+            // add collision manager to the scene
+            this._collision = new managers.LevelTwoCollision(this._playerleveltwo);
             // add this scene to the global stage container
             stage.addChild(this);
         };
         // MENU Scene updates here
         LevelTwo.prototype.update = function () {
+            //update sea
             this._sea.update();
+            //update island
             this._island.update();
+            // update enemy and check collision
+            this._enemyOne.update();
+            this._collision.check(this._enemyOne);
+            this._enemyTwo.update();
+            this._collision.check(this._enemyTwo);
+            this._enemyThree.update();
+            this._collision.check(this._enemyThree);
+            //update player
             this._playerleveltwo.update();
         };
         return LevelTwo;

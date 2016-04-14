@@ -6,9 +6,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 var objects;
 (function (objects) {
     //PLAYER CLASS
-    var LevelTwoPLayer = (function (_super) {
-        __extends(LevelTwoPLayer, _super);
-        function LevelTwoPLayer() {
+    var LevelTwoPlayer = (function (_super) {
+        __extends(LevelTwoPlayer, _super);
+        function LevelTwoPlayer() {
             _super.call(this, assets.getResult("player_level2"));
             this._oldY = this.y;
             this.width = this.getBounds().width;
@@ -21,7 +21,7 @@ var objects;
         }
         //PRIVATE METHODS
         //for checking bounds
-        LevelTwoPLayer.prototype._checkBounds = function () {
+        LevelTwoPlayer.prototype._checkBounds = function () {
             if (this.y < this._topBounds) {
                 this.y = this._topBounds;
             }
@@ -30,7 +30,7 @@ var objects;
             }
         };
         //for check mouse movement direction
-        LevelTwoPLayer.prototype._checkMouseDirection = function () {
+        LevelTwoPlayer.prototype._checkMouseDirection = function () {
             if (this._oldY < this.y) {
                 this.rotation = -10;
             }
@@ -40,13 +40,13 @@ var objects;
             this._oldY = this.y;
         };
         //PUBLIC METHODS
-        LevelTwoPLayer.prototype.update = function () {
+        LevelTwoPlayer.prototype.update = function () {
             this.y = stage.mouseY;
             this._checkBounds();
             this._checkMouseDirection();
         };
-        return LevelTwoPLayer;
+        return LevelTwoPlayer;
     })(createjs.Bitmap);
-    objects.LevelTwoPLayer = LevelTwoPLayer;
+    objects.LevelTwoPlayer = LevelTwoPlayer;
 })(objects || (objects = {}));
 //# sourceMappingURL=leveltwoplayer.js.map

@@ -1,6 +1,6 @@
 module objects {
     //PLAYER CLASS
-    export class LevelTwoPLayer extends createjs.Bitmap {
+    export class LevelTwoPlayer extends createjs.Bitmap {
         //PRIVATE INSTANCE VARIABLES
         private _topBounds: number;
         private _bottomBounds: number;
