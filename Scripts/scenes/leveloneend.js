@@ -58,15 +58,16 @@ var scenes;
         LevelOneEnd.prototype.update = function () {
             this._levelOneBackground.update();
             this._levelOnePlayer.x -= 5;
-            this._levelTwoPlayer.x += 5;
             // check if level one player reaches to the level two player's position
             if (this._levelOnePlayer.x <= 120) {
+                this._levelTwoPlayer.x += 5;
                 this._levelClearLabel.visible = true;
                 this._instructionsLabel.visible = true;
                 this._levelOneBackground.alpha -= 0.1;
                 this._levelTwoBackground.alpha += 0.1;
                 if (this._levelTwoPlayer.x >= 550) {
                     this._levelTwoPlayer.x = 550;
+                    this._levelTwoBackground.update();
                 }
             }
         };
