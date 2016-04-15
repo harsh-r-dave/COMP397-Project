@@ -18,6 +18,7 @@ var objects;
             this._topBounds = this.height * 0.5;
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
             this.x = 550;
+            this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
         }
         //PRIVATE METHODS
         //for checking bounds

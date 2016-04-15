@@ -27,7 +27,7 @@ var managers;
                             object.visible = false;
                             console.log("enemy hit");
                             levelTwo.lives = levelTwo.lives - 1;
-                            //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
+                            createjs.Sound.play("LevelTwoCrash", 0, 0, 0, 0, 0.5, 0);
                             break;
                     }
                     object.setIsColliding(true);

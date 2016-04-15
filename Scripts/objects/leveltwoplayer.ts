@@ -9,6 +9,7 @@ module objects {
         //PUBLIC INSTANCE VARIABLES
         public width: number;
         public height: number;
+        public levelTwoEngineSound: createjs.AbstractSoundInstance;
         
         constructor() {
             super(assets.getResult("player_level2"));
@@ -23,6 +24,9 @@ module objects {
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
 
             this.x = 550;
+            
+            this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
+
         }
 
         //PRIVATE METHODS

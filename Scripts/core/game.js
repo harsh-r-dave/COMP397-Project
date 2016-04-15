@@ -32,6 +32,8 @@ var assetData = [
     { id: "LevelTwoEnemy1", src: "../../Assets/images/level2_enemy1.png" },
     { id: "LevelTwoEnemy2", src: "../../Assets/images/level2_enemy2.png" },
     { id: "LevelTwoEnemy3", src: "../../Assets/images/level2_enemy3.png" },
+    { id: "LevelTwoCrash", src: "../../Assets/audio/crash.wav" },
+    { id: "SpaceShipSound", src: "../../Assets/audio/spaceship.wav" },
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },

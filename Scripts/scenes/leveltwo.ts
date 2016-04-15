@@ -82,6 +82,7 @@ module scenes {
             //check lives
             if (this.lives <= 0){
                 // change scene
+                this._playerleveltwo.levelTwoEngineSound.stop();
                 scene = config.Scene.LEVELONEEND;
                 changeScene();                
             }
