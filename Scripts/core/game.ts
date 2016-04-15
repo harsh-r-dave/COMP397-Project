@@ -30,12 +30,12 @@ var assetData: objects.Asset[] = [
     { id: "LevelOneEnemy3", src: "../../Assets/images/enemy3_level1.png" },     // level one - enemy
     { id: "Stone", src: "../../Assets/images/stone.png" },                      // level one - obstacle
     { id: "Fuel", src: "../../Assets/images/gas.png" },                         // level one - collector
-    { id: "sea", src: "../../Assets/images/sea.png" },                          // level two - sea
+    { id: "sea", src: "../../Assets/images/sea.jpg" },                          // level two - sea
     { id: "island", src: "../../Assets/images/island.png" },                    // level two - island
     { id: "player_level2", src: "../../Assets/images/player_level2.png" },      // level two - player
-    { id: "LevelTwoEnemy1", src: "../../Assets/images/plane1.png" },            // level two - enemy
-    { id: "LevelTwoEnemy2", src: "../../Assets/images/plane2.png" },            // level two - enemy
-    { id: "LevelTwoEnemy3", src: "../../Assets/images/plane3.png" },            // level two - enemy
+    { id: "LevelTwoEnemy1", src: "../../Assets/images/level2_enemy1.png" },            // level two - enemy
+    { id: "LevelTwoEnemy2", src: "../../Assets/images/level2_enemy2.png" },            // level two - enemy
+    { id: "LevelTwoEnemy3", src: "../../Assets/images/level2_enemy3.png" },            // level two - enemy
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
