@@ -15,8 +15,8 @@ module managers {
         public check(object: objects.GameObject) {
             var startPoint: createjs.Point = new createjs.Point();
             var endPoint: createjs.Point = new createjs.Point();
-            var playerHalfWidth: number = this._player.width * 0.5;
-            var objectHalfWidth: number = object.width * 0.5;
+            var playerHalfWidth: number = this._player.height * 0.5;
+            var objectHalfWidth: number = object.height * 0.5;
             var minimumDistance: number = playerHalfWidth + objectHalfWidth;
 
             startPoint.x = this._player.x;
@@ -34,22 +34,19 @@ module managers {
                         case "LevelOneEnemy":
                             object.visible = false;
                             scoreboard.removeLevelOneLives(1);
-                            console.log("enemy hit");
-                            //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
+                            createjs.Sound.play("TankCrash", 0, 0, 0, 0, 0.8, 0);
                             
                             break;
                         case "LevelOneObstacle":
                             object.visible = false;
                             scoreboard.removeLevelOneLives(1);
-                            console.log("obstacle hit");
-                            //createjs.Sound.play("Crash", 0, 0, 0, 0, 0.5, 0);
+                            createjs.Sound.play("TankCrash", 0, 0, 0, 0, 0.8, 0);
                             
                             break;
                         case "LevelOneCollector":
                             object.visible = false;
                             scoreboard.addLevelOneScore(250);
-                            console.log("gas hit");
-                            //createjs.Sound.play("Collect", 0, 0, 0, 0, 0.5, 0);
+                            createjs.Sound.play("Collect", 0, 0, 0, 0, 1, 0);
                             
                             break;
                     }

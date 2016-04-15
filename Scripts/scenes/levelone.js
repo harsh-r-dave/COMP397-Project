@@ -10,6 +10,7 @@ var scenes;
         // CONSTRUCTOR ++++++++++++++++++++++
         function LevelOne() {
             _super.call(this);
+            this._engineSound = createjs.Sound.play("TankEngine", 0, 0, 0, -1, 0.2, 0);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
@@ -49,6 +50,28 @@ var scenes;
         LevelOne.prototype.update = function () {
             this._background.update();
             this._player.update();
+            // check if enemies are overlapping
+            if ((this._enemyOne.y >= this._enemyTwo.y && this._enemyOne.y <= (this._enemyTwo.y + this._enemyTwo.height)) ||
+                (this._enemyOne.y + this._enemyOne.height) >= this._enemyTwo.y && (this._enemyOne.y + this._enemyOne.height) <= (this._enemyTwo.y + this._enemyTwo.height)) {
+                if (this._enemyOne.x >= 0 && this._enemyOne.x <= 640) {
+                    this._enemyTwo.x = -this._enemyTwo.width - 10;
+                    this._enemyTwo.y = this._enemyTwo.y - 100;
+                    // check if enemy goes out of the play area after repositioning
+                    if (this._enemyTwo.y < 0) {
+                        this._enemyTwo.x = -this._enemyTwo.width - 10;
+                        this._enemyTwo.y = this._enemyTwo.y + 100;
+                    }
+                }
+                else {
+                    this._enemyOne.x = -this._enemyOne.width - 10;
+                    this._enemyOne.y = this._enemyOne.y - 100;
+                    // check if enemy goes out of the play area after repositioning
+                    if (this._enemyOne.y < 0) {
+                        this._enemyOne.x = -this._enemyOne.width - 10;
+                        this._enemyOne.y = this._enemyOne.y + 100;
+                    }
+                }
+            }
             // check if enemy is colliding with player and update it
             this._enemyOne.update();
             this._collision.check(this._enemyOne);
@@ -61,11 +84,15 @@ var scenes;
             this._collector.update();
             this._collision.check(this._collector);
             this._updateScore();
+            // check for player's life and change scene
             if (scoreboard.getLevelOneLives() <= 0) {
+                this._engineSound.stop();
                 scene = config.Scene.END;
                 changeScene();
             }
-            if (scoreboard.getLevelOneTarget() >= 750) {
+            // check for player's target and change scene
+            if (scoreboard.getLevelOneTarget() >= 2500) {
+                this._engineSound.stop();
                 scene = config.Scene.LEVELTWO;
                 changeScene();
             }

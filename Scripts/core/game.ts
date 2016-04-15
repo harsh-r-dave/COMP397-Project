@@ -39,6 +39,9 @@ var assetData: objects.Asset[] = [
     { id: "LevelTwoEnemy3", src: "../../Assets/images/level2_enemy3.png" },            // level two - enemy
     { id: "LevelTwoCrash", src: "../../Assets/audio/crash.wav" },            // level two - plane impact sound    
     { id: "SpaceShipSound", src: "../../Assets/audio/spaceship.wav" },            // level two - spaceship sound    
+    { id: "TankEngine", src: "../../Assets/audio/tankEngine.mp3" },                         // level one - sound
+    { id: "TankCrash", src: "../../Assets/audio/tankCrash.mp3" },                         // level one - sound
+    { id: "Collect", src: "../../Assets/audio/collect.mp3" },                         // level one - sound
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },
