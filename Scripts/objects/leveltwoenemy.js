@@ -27,7 +27,7 @@ var objects;
             this.visible = true;
             // behaviour of objects
             if (this._type == "LevelTwoEnemy1") {
-                if (this._target < 100) {
+                if (this._target < 40) {
                     this._speed.x = Math.floor(Math.random() * 2) + 6;
                     this.x = value;
                 }
@@ -37,7 +37,7 @@ var objects;
                 }
             }
             else if (this._type == "LevelTwoEnemy2") {
-                if ((this._target >= 100) && (this._target < 200)) {
+                if ((this._target >= 40) && (this._target < 80)) {
                     this._speed.x = Math.floor(Math.random() * 2) + 6;
                     this.x = value;
                 }
@@ -47,7 +47,7 @@ var objects;
                 }
             }
             else if (this._type == "LevelTwoEnemy3") {
-                if (this._target >= 200) {
+                if (this._target >= 80) {
                     this._speed.x = Math.floor(Math.random() * 2) + 8;
                     this.x = value;
                 }

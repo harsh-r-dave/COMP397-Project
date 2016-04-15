@@ -37,7 +37,7 @@ var scenes;
             this._playerleveltwo = new objects.LevelTwoPlayer();
             this.addChild(this._playerleveltwo);
             // Score Label
-            this._targetLabel = new objects.Label("Target: " + this.target + "/300 kms", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: " + this.target + "/120 kms", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
             // Lives Label
             this._livesLabel = new objects.Label("lives: " + this.lives, "30px Frijole", "#FFFF00", 480, 5, false);
@@ -50,7 +50,7 @@ var scenes;
         // level 2 Scene updates here
         LevelTwo.prototype.update = function () {
             // check target and change scene if target fulfilled
-            if (this.target >= 300) {
+            if (this.target >= 120) {
                 // change scene
                 scene = config.Scene.LEVELTHREE;
                 changeScene();
@@ -84,7 +84,7 @@ var scenes;
                 this._delay += 1;
             }
             //update labels
-            this._targetLabel.text = "Target: " + this.target + "/300 kms";
+            this._targetLabel.text = "Target: " + this.target + "/120 kms";
             this._livesLabel.text = "lives: " + this.lives;
         };
         return LevelTwo;

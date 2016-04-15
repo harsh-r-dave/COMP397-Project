@@ -56,7 +56,7 @@ module scenes {
             this.addChild(this._playerleveltwo);
 
             // Score Label
-            this._targetLabel = new objects.Label("Target: " + this.target + "/300 kms", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: " + this.target + "/120 kms", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
             
             // Lives Label
@@ -73,7 +73,7 @@ module scenes {
         // level 2 Scene updates here
         public update(): void {
             // check target and change scene if target fulfilled
-            if (this.target >= 300) {
+            if (this.target >= 120) {
                 // change scene
                 scene = config.Scene.LEVELTHREE;
                 changeScene();
@@ -115,7 +115,7 @@ module scenes {
             
                         
             //update labels
-            this._targetLabel.text = "Target: " + this.target + "/300 kms";
+            this._targetLabel.text = "Target: " + this.target + "/120 kms";
             this._livesLabel.text = "lives: " + this.lives;
 
         }
