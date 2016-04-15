@@ -42,6 +42,7 @@ var assetData: objects.Asset[] = [
     { id: "TankEngine", src: "../../Assets/audio/tankEngine.mp3" },                         // level one - sound
     { id: "TankCrash", src: "../../Assets/audio/tankCrash.mp3" },                         // level one - sound
     { id: "Collect", src: "../../Assets/audio/collect.mp3" },                         // level one - sound
+    { id: "LevelClear", src: "../../Assets/audio/Levelclear.mp3" },                         // level clear - sound
     { id: "StartButton", src: "../../Assets/images/StartButton.png" },
     { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
     { id: "BackButton", src: "../../Assets/images/BackButton.png" },

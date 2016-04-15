@@ -36,7 +36,7 @@ var scenes;
             this._player = new objects.LevelOnePlayer();
             this.addChild(this._player);
             // Score Label
-            this._targetLabel = new objects.Label("Target: 0/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: 0/2500 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
             // Lives Label
             this._livesLabel = new objects.Label("lives: 5", "30px Frijole", "#FFFF00", 450, 5, false);
@@ -99,7 +99,7 @@ var scenes;
         };
         // method to update scoreboard
         LevelOne.prototype._updateScore = function () {
-            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/5000 ltr";
+            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/2500 ltr";
             this._livesLabel.text = "Lives: " + scoreboard.getLevelOneLives();
         };
         return LevelOne;

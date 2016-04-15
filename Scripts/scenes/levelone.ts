@@ -54,7 +54,7 @@ module scenes {
             this.addChild(this._player);
 
             // Score Label
-            this._targetLabel = new objects.Label("Target: 0/5000 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
+            this._targetLabel = new objects.Label("Target: 0/2500 ltr", "30px Frijole", "#FFFF00", 5, 5, false);
             this.addChild(this._targetLabel);
 
             // Lives Label
@@ -129,7 +129,7 @@ module scenes {
 
         // method to update scoreboard
         private _updateScore(): void {
-            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/5000 ltr";
+            this._targetLabel.text = "Score: " + scoreboard.getLevelOneTarget() + "/2500 ltr";
             this._livesLabel.text = "Lives: " + scoreboard.getLevelOneLives();
         }
         //EVENT HANDLERS ++++++++++++++++++++
