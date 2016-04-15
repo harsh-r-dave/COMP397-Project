@@ -122,7 +122,7 @@ module scenes {
            // check for player's target and change scene
            if(scoreboard.getLevelOneTarget() >= 2500) {
                this._engineSound.stop();
-               scene = config.Scene.LEVELTWO;
+               scene = config.Scene.LEVELONEEND;
                changeScene();
            }
         }
