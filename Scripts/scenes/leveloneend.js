@@ -38,7 +38,7 @@ var scenes;
             this.addChild(this._levelClearLabel);
             this._levelClearLabel.visible = false;
             // add instructions label to the scene
-            this._instructionsLabel = new objects.Label("   You have collected enough fuel \n           to go into the space! \nGo into the space avoiding enemies...", "20px Frijole", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
+            this._instructionsLabel = new objects.Label("   You have collected enough fuel \n           for the plane !! \nFly over the ocean and reach till the space...", "20px Frijole", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
             this.addChild(this._instructionsLabel);
             this._instructionsLabel.visible = false;
             // add the Back button to the MENU scene

@@ -54,7 +54,7 @@ module scenes {
 
             // add instructions label to the scene
             this._instructionsLabel = new objects.Label(
-                "   You have collected enough fuel \n           to go into the space! \nGo into the space avoiding enemies...",
+                "   You have collected enough fuel \n           for the plane !! \nFly over the ocean and reach till the space...",
                 "20px Frijole",
                 "#000000",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
