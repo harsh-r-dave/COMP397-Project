@@ -64,7 +64,7 @@ var assetData = [
     { id: "Planet2", src: "../../Assets/images/planet2.png" },
     { id: "Planet3", src: "../../Assets/images/planet3.png" },
     { id: "Planet4", src: "../../Assets/images/planet4.png" },
-    { id: "Player", src: "../../Assets/images/player.png" },
+    { id: "Player", src: "../../Assets/images/player_level3.png" },
     { id: "Stone1", src: "../../Assets/images/stone1.png" },
     { id: "Stone2", src: "../../Assets/images/stone2.png" },
     { id: "Star", src: "../../Assets/images/star.png" },

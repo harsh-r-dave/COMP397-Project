@@ -68,7 +68,7 @@ var assetData: objects.Asset[] = [
     { id: "Planet2", src: "../../Assets/images/planet2.png" },              // play scene - obstacle
     { id: "Planet3", src: "../../Assets/images/planet3.png" },              // play scene - obstacle
     { id: "Planet4", src: "../../Assets/images/planet4.png" },              // play scene - obstacle
-    { id: "Player", src: "../../Assets/images/player.png" },                // play scene - player
+    { id: "Player", src: "../../Assets/images/player_level3.png" },                // play scene - player
     { id: "Stone1", src: "../../Assets/images/stone1.png" },                // play scene - obstacle
     { id: "Stone2", src: "../../Assets/images/stone2.png" },                // play scene - obstacle
     { id: "Star", src: "../../Assets/images/star.png" },                    // play scene - star

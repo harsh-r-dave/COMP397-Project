@@ -23,6 +23,7 @@
 /// <reference path="../objects/bullet.ts" />
 /// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/leveltwobackground.ts" />
+/// <reference path="../objects/levelthreebackground.ts" />
 
 /// <reference path="../managers/scoreboard.ts" />
 /// <reference path="../managers/levelonecollision.ts" />

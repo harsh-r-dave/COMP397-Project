@@ -48,16 +48,17 @@ module scenes {
             scoreboard.setScore(0);
 
             // instantiate obstacles collection
-            this._obstaclesCollection = new Array("Planet1", "Planet2", "Planet3", "Planet4", "Stone1", "Stone2");
+           /* this._obstaclesCollection = new Array("Planet1", "Planet2", "Planet3", "Planet4", "Stone1", "Stone2");
             // set obstacles count
             this._obstaclesCount = 2;
             // instantiate obstacles array
             this._obstacles = new Array<objects.Obstacles>();
+            */
 
             // instantiate enemy collection
-            this._enemyCollection = new Array("Enemy1", "Enemy2", "Enemy3", "Enemy4", "Enemy5", "Enemy6", "Enemy7", "Enemy8");
+            this._enemyCollection = new Array("Enemy1", "Enemy2", "Enemy3", "Enemy4", "Enemy5", "Enemy6", "Enemy7");
             // set enemy count
-            this._enemyCount = 4;
+            this._enemyCount = 3;
             // instantiate enemy array
             this._enemy = new Array<objects.Enemy>();
 
@@ -189,15 +190,15 @@ module scenes {
             this._player.update();      // update player
 
             // check if obstacle is colliding with bullet
-            for (var obstacle = 0; obstacle < this._obstaclesCount; obstacle++) {
+           /* for (var obstacle = 0; obstacle < this._obstaclesCount; obstacle++) {
                 this.checkBulletCollision(this._obstacles[obstacle], obstacle);
-            }
+            }*/
             
             // check if obstacles are colliding with player and update it
-            this._obstacles.forEach(obstacle => {
+           /* this._obstacles.forEach(obstacle => {
                 this._collision.check(obstacle);
                 obstacle.update();
-            });
+            }); */
 
             // check if enemy is colliding with bullet
             for (var enemy = 0; enemy < this._enemyCount; enemy++) {

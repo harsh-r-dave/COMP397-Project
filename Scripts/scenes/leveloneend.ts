@@ -44,6 +44,7 @@ module scenes {
             this._levelTwoPlayer.y = 240;
             this.addChild(this._levelTwoPlayer);
 
+
             // add level clear label to the scene
             this._levelClearLabel = new objects.Label(
                 "Level 1 Clear", "60px Frijole",
