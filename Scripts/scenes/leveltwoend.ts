@@ -4,7 +4,7 @@ module scenes {
         private _backButton: objects.Button;
         private _nextButton: objects.Button;
         
-        private _levelTwoBackground: objects.LevelTwoBackground;
+        private _levelTwoBackground: objects.Sea;
         private _levelThreeBackground: objects.GameBackground;
         private _levelTwoPlayer: objects.LevelTwoPlayer;
         private _levelThreePlayer: objects.Player;
@@ -27,11 +27,11 @@ module scenes {
             createjs.Sound.play("LevelClear", 0, 0, 0, 0, 1, 0);
 
             // add level one background to the scene
-            this._levelTwoBackground = new objects.LevelTwoBackground();
+            this._levelTwoBackground = new objects.Sea();
             this.addChild(this._levelTwoBackground);
 
             // add level two background to the scene
-            this._levelTwoBackground = new objects.LevelTwoBackground();
+            this._levelTwoBackground = new objects.Sea();
             this.addChild(this._levelTwoBackground);
             this._levelTwoBackground.alpha = 0;
 
@@ -53,7 +53,7 @@ module scenes {
                 "#000000",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y - 100, true);
             this.addChild(this._levelClearLabel);
-            this._levelClearLabel.visible = false;
+           // this._levelClearLabel.visible = false;
 
             // add instructions label to the scene
             this._instructionsLabel = new objects.Label(
@@ -62,11 +62,11 @@ module scenes {
                 "#000000",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
             this.addChild(this._instructionsLabel);
-            this._instructionsLabel.visible = false;
+           // this._instructionsLabel.visible = false;
 
             // add the Back button to the MENU scene
             this._backButton = new objects.Button(
-                "LevelTwoButton",
+                "LevelThreeButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 180, true);
             this.addChild(this._backButton);
@@ -81,15 +81,13 @@ module scenes {
                 config.Screen.CENTER_Y + 180, false);
             //this.addChild(this._nextButton);
 
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
             
             // add the Back button to the MENU scene
             this._backButton = new objects.Button(
                 "LevelThreeButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 180, false);
-            this.addChild(this._backButton);
+            //this.addChild(this._backButton);
             
             // Back Button event listener
             this._backButton.on("click", this._backButtonClick, this);
@@ -99,10 +97,7 @@ module scenes {
                 "GameOverButton",
                 config.Screen.CENTER_X + 50,
                 config.Screen.CENTER_Y + 180, false);
-            this.addChild(this._nextButton);
-            
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
+           // this.addChild(this._nextButton);
             
             // add this scene to the global stage container
             stage.addChild(this);
@@ -119,15 +114,15 @@ module scenes {
         // PLAY Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the THREE Scene
-            scene = config.Scene.LEVELTWO;
+            scene = config.Scene.LEVELTHREE;
             changeScene();
         }
         
         // INSTRUCTIONS Button click event handler
-        private _nextButtonClick(event: createjs.MouseEvent) {
+       /* private _nextButtonClick(event: createjs.MouseEvent) {
             // Switch to the END Scene
             scene = config.Scene.LEVELTHREE;
             changeScene();
-        }
+        } */
     }
 }

@@ -76,7 +76,7 @@ module scenes {
             if (this.target >= 12) {
                 // change scene
                 this._playerleveltwo.levelTwoEngineSound.stop();
-                scene = config.Scene.LEVELTHREE;
+                scene = config.Scene.LEVELTWOEND;
                 changeScene();
             }
             
