@@ -57,7 +57,7 @@ module scenes {
             this._instructionsLabel = new objects.Label(
                 "   You have collected enough MO \n           for the spaceship !! \nNow battle hard in the space  \n          and kill all the enemies..!!",
                 "20px Frijole",
-                "#000000",
+                "white",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
             this.addChild(this._instructionsLabel);
             this._instructionsLabel.visible = false;
