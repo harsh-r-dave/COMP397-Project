@@ -175,7 +175,7 @@ var scenes;
             // check if life becomes 0
             if (scoreboard.getLives() < 1) {
                 this._player.engineOff();
-                scene = config.Scene.END;
+                scene = config.Scene.LEVELTHREELOSE;
                 changeScene();
             }
         };
