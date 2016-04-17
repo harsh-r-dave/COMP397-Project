@@ -63,14 +63,14 @@ module scenes {
             
             //Add SCORE Label
             this._scoreLabel = new objects.Label(
-                "HURRAY!!! You Scored : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "30px Frijole",
+                "HURRAY!!! You Scored : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "25px Frijole",
                 "#ffff00",
-                config.Screen.CENTER_X, 150, true);
+                config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
             
             //add player images in the end scene
             this._player1= new createjs.Bitmap(assets.getResult("PlayerLevelOne"));
-            this._player1.x = 100;
+            this._player1.x = 70;
             this._player1.y = 300;
             this.addChild(this._player1);
             
