@@ -7,6 +7,7 @@ var stats;
 var currentScene;
 var scene;
 var scoreboard;
+var percentLoaded;
 // Game Scenes
 var menu;
 var instructions;
@@ -88,10 +89,17 @@ var assetData = [
 function preload() {
     assets = new createjs.LoadQueue();
     assets.installPlugin(createjs.Sound);
+    assets.addEventListener("progress", handleProgress);
     assets.on("complete", init, this);
     assets.loadManifest(assetData);
 }
+function handleProgress(event) {
+    percentLoaded = event.loaded;
+    document.getElementById("load").innerHTML = "Loading. . ." + (Math.floor(percentLoaded * 100)).toString() + "%";
+}
 function init() {
+    // remove loading status
+    document.getElementById("load").remove();
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
     // create our main display list container

@@ -9,6 +9,7 @@ var stats: Stats;
 var currentScene: objects.Scene;
 var scene: number;
 var scoreboard: managers.Scoreboard;
+var percentLoaded: number;
 
 // Game Scenes
 var menu: scenes.Menu;
@@ -87,17 +88,26 @@ var assetData: objects.Asset[] = [
     { id: "Up", src: "../../Assets/images/up.png" },                        // instructions scene - Up button
     { id: "Down", src: "../../Assets/images/down.png" },                    // instructions scene - Down button
     { id: "PlayAgain", src: "../../Assets/images/playAgain.png" },          // end scene - PlayAgain button
-    { id: "Home", src: "../../Assets/images/home.png" } 
+    { id: "Home", src: "../../Assets/images/home.png" }
 ];
 
 function preload() {
     assets = new createjs.LoadQueue();
     assets.installPlugin(createjs.Sound);
+    assets.addEventListener("progress", handleProgress);
     assets.on("complete", init, this);
     assets.loadManifest(assetData);
 }
 
+function handleProgress(event: ProgressEvent): void {
+    percentLoaded = event.loaded;
+    document.getElementById("load").innerHTML = "Loading. . ." + (Math.floor(percentLoaded * 100)).toString() + "%";
+}
+
 function init(): void {
+    // remove loading status
+    document.getElementById("load").remove();
+    
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
 
