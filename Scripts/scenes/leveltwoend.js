@@ -26,12 +26,13 @@ var scenes;
             // add level two player to the scene
             this._levelTwoPlayer = new objects.LevelTwoPlayer();
             this._levelTwoPlayer.x = 580;
-            this._levelTwoPlayer.y = 240;
+            this._levelTwoPlayer.y = stage.mouseY;
             this.addChild(this._levelTwoPlayer);
             // add level three player to the scene
             this._levelThreePlayer = new objects.Player();
             this._levelThreePlayer.x = -this._levelThreePlayer.width - 10;
             this._levelThreePlayer.y = 240;
+            this._levelThreePlayer.scaleX = -1;
             this.addChild(this._levelThreePlayer);
             // add level clear label to the scene
             this._levelClearLabel = new objects.Label("Level 2 Clear", "60px Frijole", "white", config.Screen.CENTER_X, config.Screen.CENTER_Y - 100, true);
@@ -42,15 +43,10 @@ var scenes;
             this.addChild(this._instructionsLabel);
             this._instructionsLabel.visible = false;
             // add the Level 3 button to the MENU scene
-            this._backButton = new objects.Button("LevelThreeButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180, true);
-            this.addChild(this._backButton);
+            this._levelThreeButton = new objects.Button("LevelThreeButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180, true);
+            this.addChild(this._levelThreeButton);
             // Back Button event listener
-            this._backButton.on("click", this._backButtonClick, this);
-            // add the Next button to the MENU scene
-            this._nextButton = new objects.Button("GameOverButton", config.Screen.CENTER_X + 50, config.Screen.CENTER_Y + 180, false);
-            //this.addChild(this._nextButton);
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
+            this._levelThreeButton.on("click", this._levelThreeButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -58,31 +54,26 @@ var scenes;
         LevelTwoEnd.prototype.update = function () {
             this._levelTwoBackground.update();
             this._levelTwoPlayer.x -= 5;
-            // check if level two player reaches to the level three player's position
+            // check if level two player reaches at the end of the screen
             if (this._levelTwoPlayer.x <= 120) {
                 this._levelThreePlayer.x += 5;
                 this._levelClearLabel.visible = true;
                 this._instructionsLabel.visible = true;
                 this._levelTwoBackground.alpha -= 0.1;
                 this._levelThreeBackground.alpha += 0.1;
+                // check if level three player reaches at its position
                 if (this._levelThreePlayer.x >= 550) {
                     this._levelThreePlayer.x = 550;
+                    this._levelThreePlayer.scaleX = 1;
                     this._levelThreeBackground.update();
                 }
             }
         };
         //EVENT HANDLERS ++++++++++++++++++++
-        // PLAY Button click event handler
-        LevelTwoEnd.prototype._backButtonClick = function (event) {
+        // LEVEL THREE Button click event handler
+        LevelTwoEnd.prototype._levelThreeButtonClick = function (event) {
             // Switch to the THREE Scene
             scene = config.Scene.LEVELTHREE;
-            changeScene();
-            //console.log("Level 3");
-        };
-        // INSTRUCTIONS Button click event handler
-        LevelTwoEnd.prototype._nextButtonClick = function (event) {
-            // Switch to the END Scene
-            scene = config.Scene.LEVELONE;
             changeScene();
         };
         return LevelTwoEnd;

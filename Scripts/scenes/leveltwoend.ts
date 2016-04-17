@@ -8,8 +8,7 @@ module scenes {
 
         private _levelClearLabel: objects.Label;
         private _instructionsLabel: objects.Label;
-        private _backButton: objects.Button;
-        private _nextButton: objects.Button;
+        private _levelThreeButton: objects.Button;
 
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -35,13 +34,14 @@ module scenes {
             // add level two player to the scene
             this._levelTwoPlayer = new objects.LevelTwoPlayer();
             this._levelTwoPlayer.x = 580;
-            this._levelTwoPlayer.y = 240;
+            this._levelTwoPlayer.y = stage.mouseY;
             this.addChild(this._levelTwoPlayer);
 
             // add level three player to the scene
             this._levelThreePlayer = new objects.Player();
             this._levelThreePlayer.x = -this._levelThreePlayer.width - 10;
             this._levelThreePlayer.y = 240;
+            this._levelThreePlayer.scaleX = -1;
             this.addChild(this._levelThreePlayer);
 
 
@@ -63,24 +63,14 @@ module scenes {
             this._instructionsLabel.visible = false;
 
             // add the Level 3 button to the MENU scene
-            this._backButton = new objects.Button(
+            this._levelThreeButton = new objects.Button(
                 "LevelThreeButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 180, true);
-            this.addChild(this._backButton);
+            this.addChild(this._levelThreeButton);
 
             // Back Button event listener
-            this._backButton.on("click", this._backButtonClick, this);
-
-            // add the Next button to the MENU scene
-            this._nextButton = new objects.Button(
-                "GameOverButton",
-                config.Screen.CENTER_X + 50,
-                config.Screen.CENTER_Y + 180, false);
-            //this.addChild(this._nextButton);
-
-            // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
+            this._levelThreeButton.on("click", this._levelThreeButtonClick, this);
 
             // add this scene to the global stage container
             stage.addChild(this);
@@ -92,15 +82,17 @@ module scenes {
             this._levelTwoPlayer.x -= 5;
 
 
-            // check if level two player reaches to the level three player's position
+            // check if level two player reaches at the end of the screen
             if (this._levelTwoPlayer.x <= 120) {
                 this._levelThreePlayer.x += 5;
                 this._levelClearLabel.visible = true;
                 this._instructionsLabel.visible = true;
                 this._levelTwoBackground.alpha -= 0.1;
                 this._levelThreeBackground.alpha += 0.1;
+                // check if level three player reaches at its position
                 if (this._levelThreePlayer.x >= 550) {
                     this._levelThreePlayer.x = 550;
+                    this._levelThreePlayer.scaleX = 1;
                     this._levelThreeBackground.update();
                 }
             }
@@ -109,18 +101,10 @@ module scenes {
 
         //EVENT HANDLERS ++++++++++++++++++++
 
-        // PLAY Button click event handler
-        private _backButtonClick(event: createjs.MouseEvent) {
+        // LEVEL THREE Button click event handler
+        private _levelThreeButtonClick(event: createjs.MouseEvent) {
             // Switch to the THREE Scene
             scene = config.Scene.LEVELTHREE;
-            changeScene();
-            //console.log("Level 3");
-        }
-
-        // INSTRUCTIONS Button click event handler
-        private _nextButtonClick(event: createjs.MouseEvent) {
-            // Switch to the END Scene
-            scene = config.Scene.LEVELONE;
             changeScene();
         }
     }
