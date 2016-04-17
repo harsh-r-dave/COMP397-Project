@@ -238,6 +238,12 @@ module scenes {
         private _updateScore(): void {
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
+            
+            if(scoreboard.getScore()>=2000)
+            {
+                scene=config.Scene.END;
+                changeScene();
+            }
         }
         
         //EVENT HANDLERS ++++++++++++++++++++
