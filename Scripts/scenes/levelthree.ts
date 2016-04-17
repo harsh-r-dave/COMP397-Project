@@ -108,7 +108,7 @@ module scenes {
             this.addChild(this._livesLabel);
             
             // add the Back button to the MENU scene
-            this._backButton = new objects.Button(
+            /*this._backButton = new objects.Button(
                 "LevelTwoButton",
                 config.Screen.CENTER_X - 150,
                 config.Screen.CENTER_Y + 180, false);
@@ -123,9 +123,10 @@ module scenes {
                 config.Screen.CENTER_X + 50,
                 config.Screen.CENTER_Y + 180, false);
             this.addChild(this._nextButton);
+            */
             
             // Next Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
+           // this._nextButton.on("click", this._nextButtonClick, this);
             
             // add this scene to the global stage container
             stage.addChild(this);
@@ -249,7 +250,7 @@ module scenes {
         //EVENT HANDLERS ++++++++++++++++++++
         
         // PLAY Button click event handler
-        private _backButtonClick(event: createjs.MouseEvent) {
+       /* private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the THREE Scene
             scene = config.Scene.LEVELTWO;
             changeScene();
@@ -261,5 +262,6 @@ module scenes {
             scene = config.Scene.END;
             changeScene();
         }
+        */
     }
 }

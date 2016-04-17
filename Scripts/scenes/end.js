@@ -44,7 +44,7 @@ var scenes;
                 this.addChild(this._obstacles[obstacle]);
             }*/
             //Add SCORE Label
-            this._scoreLabel = new objects.Label("HURRAY!!! You reached the high Score : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "25px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
+            this._scoreLabel = new objects.Label("HURRAY!!! You reached the high Score : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "20px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
             //add player images in the end scene
             this._player1 = new createjs.Bitmap(assets.getResult("PlayerLevelOne"));
@@ -85,7 +85,7 @@ var scenes;
         // PLAY_AGAIN Button click event handler
         End.prototype._playAgainButtonClick = function (event) {
             // Switch to the PLAY Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEVELTHREE;
             changeScene();
         };
         // HOME Button click event handler

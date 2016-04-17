@@ -63,7 +63,7 @@ module scenes {
             
             //Add SCORE Label
             this._scoreLabel = new objects.Label(
-                "HURRAY!!! You reached the high Score : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "25px Frijole",
+                "HURRAY!!! You reached the high Score : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "20px Frijole",
                 "#ffff00",
                 config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
@@ -128,7 +128,7 @@ module scenes {
         // PLAY_AGAIN Button click event handler
         private _playAgainButtonClick(event: createjs.MouseEvent) {
             // Switch to the PLAY Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.LEVELTHREE;
             changeScene();
         }
         
