@@ -19,6 +19,7 @@ var levelOneEnd;
 var levelTwoEnd;
 var levelOneLose;
 var levelTwoLose;
+var levelThreeLose;
 var assetData = [
     // Add your Assets here
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },
@@ -202,6 +203,13 @@ function changeScene() {
             levelTwoLose = new scenes.LevelTwoLose();
             currentScene = levelTwoLose;
             console.log("Starting LEVEL TWO LOSE Scene");
+            break;
+        case config.Scene.LEVELTHREELOSE:
+            // show the LEVEL THREE scene
+            stage.removeAllChildren();
+            levelThreeLose = new scenes.LevelThreeLose();
+            currentScene = levelThreeLose;
+            console.log("Starting LEVEL THREE LOSE Scene");
             break;
         case config.Scene.END:
             // show the END scene

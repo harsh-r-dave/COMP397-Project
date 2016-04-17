@@ -15,6 +15,7 @@ var config;
         Scene.LEVELTWOEND = 8;
         Scene.LEVELTHREE = 9;
         Scene.END = 10;
+        Scene.LEVELTHREELOSE = 11;
         return Scene;
     })();
     config.Scene = Scene;

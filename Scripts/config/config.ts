@@ -13,6 +13,7 @@
         public static LEVELTWOEND: number = 8;
         public static LEVELTHREE: number = 9;
         public static END: number = 10;
+        public static LEVELTHREELOSE: number = 11;
         
  
     }

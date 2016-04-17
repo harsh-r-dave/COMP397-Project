@@ -36,6 +36,7 @@
 /// <reference path="../scenes/leveltwo.ts" />
 /// <reference path="../scenes/levelonelose.ts" />
 /// <reference path="../scenes/leveltwolose.ts" />
+/// <reference path="../scenes/levelthreelose.ts" />
 /// <reference path="../scenes/leveloneend.ts" />
 /// <reference path="../scenes/levelone.ts" />
 /// <reference path="../scenes/play.ts" />
