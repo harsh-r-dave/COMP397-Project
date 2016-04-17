@@ -25,7 +25,7 @@ var objects;
         LevelOneEnemy.prototype._reset = function (value) {
             this.visible = true;
             // behaviour of objects
-            this._speed.x = Math.floor(Math.random() * 2) + 5;
+            this._speed.x = Math.floor(Math.random() * 3) + 5;
             // location of objects
             this.y = Math.floor(Math.random() * this._bottomBounds);
             this.x = value;

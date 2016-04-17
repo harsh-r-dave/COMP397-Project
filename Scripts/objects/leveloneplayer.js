@@ -17,6 +17,8 @@ var objects;
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
             this.x = 540;
             this._previousY = this.y;
+            // Assign keyboard controls
+            this._assignControls();
         }
         // PRIVATE METHODS
         LevelOnePlayer.prototype._checkBounds = function () {
@@ -42,10 +44,69 @@ var objects;
         };
         // PUBLIC METHODS
         LevelOnePlayer.prototype.update = function () {
-            this.y = stage.mouseY;
+            if (controls.UP == true || controls.DOWN == true) {
+                // move with mouse
+                this._controlAction();
+                stage.mouseY = this.y; // change mouseY to move player with keyboard
+            }
+            else {
+                this.y = stage.mouseY;
+            }
+            // check players boundary
             this._checkBounds();
             this._checkMouseDirection();
         };
+        // Bind key actions to player events
+        LevelOnePlayer.prototype._assignControls = function () {
+            window.onkeydown = this._onControlDown;
+            window.onkeyup = this._onControlUp;
+        };
+        // Switch statement to activate movement and rotation
+        LevelOnePlayer.prototype._onControlDown = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = true;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = true;
+                    break;
+            }
+        };
+        // switch statement to reset controls
+        LevelOnePlayer.prototype._onControlUp = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = false;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = false;
+                    break;
+            }
+        };
+        // Respond to player key presses
+        LevelOnePlayer.prototype._controlAction = function () {
+            // Execute left turn
+            if (controls.UP) {
+                this.moveUp();
+            }
+            // Execute right turn
+            if (controls.DOWN) {
+                this.moveDown();
+            }
+        };
+        // Turn Left Method
+        LevelOnePlayer.prototype.moveUp = function () {
+            this.y -= 5;
+        };
+        // Turn Right Method
+        LevelOnePlayer.prototype.moveDown = function () {
+            this.y += 5;
+        };
+        // turn off the engine
         LevelOnePlayer.prototype.engineOff = function () {
         };
         return LevelOnePlayer;

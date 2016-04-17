@@ -11,7 +11,7 @@ var objects;
         // CONSTRUCTOR ++++++++++++++++++++++++
         function LevelOneBackground() {
             _super.call(this, "Desert");
-            this._speed.x = 2; // space speed
+            this._speed.x = 3; // space speed
             this._reset(-640);
             //this._reset(0);   // right to left
         }

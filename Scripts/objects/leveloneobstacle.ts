@@ -22,7 +22,7 @@ module objects {
         protected _reset(value: number): void {
             this.visible = true;
             // behaviour of objects
-            this._speed.x = 2;
+            this._speed.x = 3;
             
             // location of objects
             this.y = Math.floor(Math.random() * this._bottomBounds);
