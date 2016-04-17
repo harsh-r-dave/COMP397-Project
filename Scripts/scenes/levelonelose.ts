@@ -65,15 +65,15 @@ module scenes {
             
             //Add SCORE Label
             this._scoreLabel = new objects.Label(
-                "You Scored : " + scoreboard.getScore() + "\nSorry you lost!! No worries, Try again!!", "25px Frijole",
+                "\nSorry you lost!! \nNo worries, Try again!!", "25px Frijole",
                 "#ffff00",
                 config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
             
             //add player images in the end scene
             this._player1= new createjs.Bitmap(assets.getResult("PlayerLevelOne"));
-            this._player1.x = config.Screen.CENTER_X;
-            this._player1.y = 300;
+            this._player1.x = config.Screen.CENTER_X - 100;
+            this._player1.y = config.Screen.CENTER_Y;
             this.addChild(this._player1);
             
             /*this._player2= new createjs.Bitmap(assets.getResult("player_level2"));

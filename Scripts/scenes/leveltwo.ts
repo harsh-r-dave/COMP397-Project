@@ -73,7 +73,7 @@ module scenes {
         // level 2 Scene updates here
         public update(): void {
             // check target and change scene if target fulfilled
-            if (this.target >= 12) {
+            if (this.target >= 15) {
                 // change scene
                 this._playerleveltwo.levelTwoEngineSound.stop();
                 scene = config.Scene.LEVELTWOEND;

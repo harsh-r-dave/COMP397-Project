@@ -44,7 +44,7 @@ var scenes;
                 this.addChild(this._obstacles[obstacle]);
             }*/
             //Add SCORE Label
-            this._scoreLabel = new objects.Label("HURRAY!!! You Scored : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "25px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
+            this._scoreLabel = new objects.Label("HURRAY!!! You reached the high Score : " + scoreboard.getScore() + "\nYou are the ultimate saviour!! \nYou saved Earth!!", "25px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
             //add player images in the end scene
             this._player1 = new createjs.Bitmap(assets.getResult("PlayerLevelOne"));
