@@ -104,24 +104,24 @@ module objects {
 
         // Respond to player key presses
         private _controlAction() {
-            // Execute left turn
+            // Execute up turn
             if (controls.UP) {
                 this.moveUp();
             }
 
-            // Execute right turn
+            // Execute down turn
             if (controls.DOWN) {
                 this.moveDown();
             }
 
         }
 
-        // Turn Left Method
+        // Move Upt Method
         public moveUp() {
             this.y -= 5;
         }
 
-        // Turn Right Method
+        // Move Down Method
         public moveDown() {
             this.y += 5;
         }

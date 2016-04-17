@@ -89,20 +89,20 @@ var objects;
         };
         // Respond to player key presses
         LevelOnePlayer.prototype._controlAction = function () {
-            // Execute left turn
+            // Execute up turn
             if (controls.UP) {
                 this.moveUp();
             }
-            // Execute right turn
+            // Execute down turn
             if (controls.DOWN) {
                 this.moveDown();
             }
         };
-        // Turn Left Method
+        // Move Upt Method
         LevelOnePlayer.prototype.moveUp = function () {
             this.y -= 5;
         };
-        // Turn Right Method
+        // Move Down Method
         LevelOnePlayer.prototype.moveDown = function () {
             this.y += 5;
         };

@@ -29,6 +29,7 @@ var objects;
             this._topBounds = this.height * 0.5;
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
             this.x = 580;
+            this._assignControls();
             this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
         }
         // PRIVATE METHODS
@@ -42,8 +43,65 @@ var objects;
         };
         // PUBLIC METHODS
         Player.prototype.update = function () {
-            this.y = stage.mouseY;
+            if (controls.UP == true || controls.DOWN == true) {
+                // move with mouse
+                this._controlAction();
+                stage.mouseY = this.y; // change mouseY to move player with keyboard
+            }
+            else {
+                this.y = stage.mouseY;
+            }
             this._checkBounds();
+        };
+        // Bind key actions to player events
+        Player.prototype._assignControls = function () {
+            window.onkeydown = this._onControlDown;
+            window.onkeyup = this._onControlUp;
+        };
+        // Switch statement to activate movement and rotation
+        Player.prototype._onControlDown = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = true;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = true;
+                    break;
+            }
+        };
+        // switch statement to reset controls
+        Player.prototype._onControlUp = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = false;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = false;
+                    break;
+            }
+        };
+        // Respond to player key presses
+        Player.prototype._controlAction = function () {
+            // Execute up turn
+            if (controls.UP) {
+                this.moveUp();
+            }
+            // Execute down turn
+            if (controls.DOWN) {
+                this.moveDown();
+            }
+        };
+        // Move Up Method
+        Player.prototype.moveUp = function () {
+            this.y -= 5;
+        };
+        // Move Down Method
+        Player.prototype.moveDown = function () {
+            this.y += 5;
         };
         Player.prototype.engineOff = function () {
             this._engineSound.stop();

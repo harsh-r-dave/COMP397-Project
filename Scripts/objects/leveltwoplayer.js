@@ -19,6 +19,7 @@ var objects;
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
             this.x = 550;
             this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
+            this._assignControls();
         }
         //PRIVATE METHODS
         //for checking bounds
@@ -42,9 +43,66 @@ var objects;
         };
         //PUBLIC METHODS
         LevelTwoPlayer.prototype.update = function () {
-            this.y = stage.mouseY;
+            if (controls.UP == true || controls.DOWN == true) {
+                // move with mouse
+                this._controlAction();
+                stage.mouseY = this.y; // change mouseY to move player with keyboard
+            }
+            else {
+                this.y = stage.mouseY;
+            }
             this._checkBounds();
             this._checkMouseDirection();
+        };
+        // Bind key actions to player events
+        LevelTwoPlayer.prototype._assignControls = function () {
+            window.onkeydown = this._onControlDown;
+            window.onkeyup = this._onControlUp;
+        };
+        // Switch statement to activate movement and rotation
+        LevelTwoPlayer.prototype._onControlDown = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = true;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = true;
+                    break;
+            }
+        };
+        // switch statement to reset controls
+        LevelTwoPlayer.prototype._onControlUp = function (event) {
+            switch (event.keyCode) {
+                case keys.W:
+                case keys.UP:
+                    controls.UP = false;
+                    break;
+                case keys.S:
+                case keys.DOWN:
+                    controls.DOWN = false;
+                    break;
+            }
+        };
+        // Respond to player key presses
+        LevelTwoPlayer.prototype._controlAction = function () {
+            // Execute up turn
+            if (controls.UP) {
+                this.moveUp();
+            }
+            // Execute down turn
+            if (controls.DOWN) {
+                this.moveDown();
+            }
+        };
+        // Move Upt Method
+        LevelTwoPlayer.prototype.moveUp = function () {
+            this.y -= 5;
+        };
+        // Move Down Method
+        LevelTwoPlayer.prototype.moveDown = function () {
+            this.y += 5;
         };
         return LevelTwoPlayer;
     })(createjs.Bitmap);
