@@ -89,7 +89,7 @@ module scenes {
             this._playAgainButton = new objects.Button(
                 "PlayAgain",
                 config.Screen.CENTER_X - 150,
-                config.Screen.CENTER_Y + 200, false);
+                config.Screen.CENTER_Y + 190, false);
             this.addChild(this._playAgainButton);
 
             // PLAY_AGAIN Button event listener
@@ -99,7 +99,7 @@ module scenes {
             this._homeButton = new objects.Button(
                 "Home",
                 config.Screen.CENTER_X + 50,
-                config.Screen.CENTER_Y + 200, false);
+                config.Screen.CENTER_Y + 190, false);
             this.addChild(this._homeButton);
 
             // HOME Button event listener
