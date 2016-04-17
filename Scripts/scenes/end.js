@@ -60,7 +60,7 @@ var scenes;
             this._player3.y = 300;
             this.addChild(this._player3);
             // add the PlayAgain button to the END scene
-            this._playAgainButton = new objects.Button("PlayAgain", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 180, false);
+            this._playAgainButton = new objects.Button("PlayAgain", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 200, false);
             this.addChild(this._playAgainButton);
             // PLAY_AGAIN Button event listener
             this._playAgainButton.on("click", this._playAgainButtonClick, this);

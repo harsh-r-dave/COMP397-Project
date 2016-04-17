@@ -89,7 +89,7 @@ module scenes {
             this._playAgainButton = new objects.Button(
                 "PlayAgain",
                 config.Screen.CENTER_X - 150,
-                config.Screen.CENTER_Y + 180, false);
+                config.Screen.CENTER_Y + 200, false);
             this.addChild(this._playAgainButton);
 
             // PLAY_AGAIN Button event listener

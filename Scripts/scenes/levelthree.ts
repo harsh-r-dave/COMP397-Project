@@ -76,7 +76,7 @@ module scenes {
 
             // add enemy to the scene
             for (var enemy: number = 0; enemy < this._enemyCount; enemy++) {
-                var randomEnemy = Math.floor(Math.random() * 8);
+                var randomEnemy = Math.floor(Math.random() * 7);
 
                 this._enemy[enemy] = new objects.Enemy(this._enemyCollection[randomEnemy]);
                 this.addChild(this._enemy[enemy]);
