@@ -20,6 +20,8 @@ var levelThree: scenes.LevelThree;
 var end: scenes.End;
 var levelOneEnd: scenes.LevelOneEnd;
 var levelTwoEnd: scenes.LevelTwoEnd;
+var levelOneLose: scenes.LevelOneLose;
+var levelTwoLose: scenes.LevelTwoLose;
 
 var assetData: objects.Asset[] = [
     // Add your Assets here
@@ -206,6 +208,20 @@ function changeScene(): void {
             levelThree = new scenes.LevelThree();
             currentScene = levelThree;
             console.log("Starting LEVEL THREE Scene");
+            break;
+        case config.Scene.LEVELONELOSE:
+            // show the LEVEL THREE scene
+            stage.removeAllChildren();
+            levelOneLose = new scenes.LevelOneLose();
+            currentScene = levelOneLose;
+            console.log("Starting LEVEL ONE LOSE Scene");
+            break;
+        case config.Scene.LEVELTWOLOSE:
+            // show the LEVEL THREE scene
+            stage.removeAllChildren();
+            levelTwoLose = new scenes.LevelTwoLose();
+            currentScene = levelTwoLose;
+            console.log("Starting LEVEL TWO LOSE Scene");
             break;
         case config.Scene.END:
             // show the END scene

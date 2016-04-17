@@ -6,11 +6,15 @@
         public static INSTRUCTIONS: number = 1;
         public static PLAY: number = 2;
         public static LEVELONE: number = 3;
-        public static LEVELTWO: number = 4;
-        public static LEVELTHREE: number = 5;
-        public static END: number = 6;
-        public static LEVELONEEND: number = 7;
+        public static LEVELONELOSE: number = 4;
+        public static LEVELONEEND: number = 5;
+        public static LEVELTWO: number = 6;
+        public static LEVELTWOLOSE: number = 7;
         public static LEVELTWOEND: number = 8;
+        public static LEVELTHREE: number = 9;
+        public static END: number = 10;
+        
+ 
     }
     
     

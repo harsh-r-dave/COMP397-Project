@@ -115,7 +115,7 @@ module scenes {
            // check for player's life and change scene
            if(scoreboard.getLevelOneLives() <= 0) {
                this._engineSound.stop();
-               scene = config.Scene.END;
+               scene = config.Scene.LEVELONELOSE;
                changeScene();
            }
            
