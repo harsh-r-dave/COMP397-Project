@@ -63,7 +63,7 @@ var scenes;
             this.addChild(this._player2);
             */
             this._player3 = new createjs.Bitmap(assets.getResult("Player"));
-            this._player3.x = 450;
+            this._player3.x = config.Screen.CENTER_X - 50;
             this._player3.y = 300;
             this.addChild(this._player3);
             // add the PlayAgain button to the END scene

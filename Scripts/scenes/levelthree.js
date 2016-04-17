@@ -183,7 +183,7 @@ var scenes;
         LevelThree.prototype._updateScore = function () {
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
-            if (scoreboard.getScore() >= 2000) {
+            if (scoreboard.getScore() >= 3000) {
                 scene = config.Scene.END;
                 changeScene();
             }
