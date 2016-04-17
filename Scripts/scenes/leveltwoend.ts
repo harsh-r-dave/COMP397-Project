@@ -114,6 +114,7 @@ module scenes {
             // Switch to the THREE Scene
             scene = config.Scene.LEVELTHREE;
             changeScene();
+            //console.log("Level 3");
         }
 
         // INSTRUCTIONS Button click event handler
