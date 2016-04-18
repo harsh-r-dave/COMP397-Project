@@ -63,7 +63,7 @@ var scenes;
                 this.addChild(this._obstacles[obstacle]);
             }*/
             //Add SCORE Label
-            this._scoreLabel = new objects.Label("\nSorry you lost!! \nNo worries, Try again!!", "25px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
+            this._scoreLabel = new objects.Label("Collected: " + scoreboard.getLevelOneTarget() + "/2500Ltr\nSorry you lost!! \nNo worries, Try again!!", "25px Frijole", "#ffff00", config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
             //add player images in the end scene
             this._player1 = new createjs.Bitmap(assets.getResult("PlayerLevelOne"));

@@ -78,7 +78,7 @@ module scenes {
             
             //Add SCORE Label
             this._scoreLabel = new objects.Label(
-                "\nSorry you lost!! \nNo worries, Try again!!", "25px Frijole",
+                "Collected: " + scoreboard.getLevelOneTarget() +"/2500Ltr\nSorry you lost!! \nNo worries, Try again!!", "25px Frijole",
                 "#ffff00",
                 config.Screen.CENTER_X, 100, true);
             this.addChild(this._scoreLabel);
