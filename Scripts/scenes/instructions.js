@@ -14,11 +14,11 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Instructions.prototype.start = function () {
-            //Add Play Label
-            this._instructionsLabel = new objects.Label("INSTRUCTIONS SCENE", "60px Consolas", "#000000", config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
-            this.addChild(this._instructionsLabel);
+            // add instructions image to the scene
+            this._instructionsImage = new createjs.Bitmap(assets.getResult("Instructions"));
+            this.addChild(this._instructionsImage);
             // add the Play button to the MENU scene
-            this._button = new objects.Button("BackButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180, false);
+            this._button = new objects.Button("GotIt", config.Screen.CENTER_X, config.Screen.CENTER_Y + 210, true);
             this.addChild(this._button);
             // Play Button event listener
             this._button.on("click", this._buttonClick, this);

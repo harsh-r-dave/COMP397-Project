@@ -24,6 +24,7 @@ var levelThreeLose;
 var assetData = [
     // Add your Assets here
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },
+    { id: "Instructions", src: "../../Assets/images/instructions.jpg" },
     { id: "Desert", src: "../../Assets/images/desert.jpg" },
     { id: "PlayerLevelOne", src: "../../Assets/images/player_level1.png" },
     { id: "LevelOneEnemy1", src: "../../Assets/images/enemy1_level1.png" },

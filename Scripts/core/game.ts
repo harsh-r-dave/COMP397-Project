@@ -28,6 +28,7 @@ var levelThreeLose: scenes.LevelThreeLose;
 var assetData: objects.Asset[] = [
     // Add your Assets here
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },          // menu screen - background images
+    { id: "Instructions", src: "../../Assets/images/instructions.jpg" },          // instruction s screen - background images
     { id: "Desert", src: "../../Assets/images/desert.jpg" },            // level one - background
     { id: "PlayerLevelOne", src: "../../Assets/images/player_level1.png" },     // level one - player
     { id: "LevelOneEnemy1", src: "../../Assets/images/enemy1_level1.png" },     // level one - enemy
