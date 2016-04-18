@@ -1,3 +1,15 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ collision.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Viranch Shah, Student, Centennial College
+    
+    Date First Modified: Apr 10, 2016
+    Date Last  Modified: Apr 10, 2016
+    Last Modified by: Viranch Shah, student, Centennial College
+    
+    Program Description: Checks of two objects collide.
+    Revision History: check method updated
+*/
 var managers;
 (function (managers) {
     // COLLISION MANAGER CLASS

@@ -1,3 +1,17 @@
+/* 
+    Source File: COMP397-W2016-MailPilotDemo-master/ scoreboard.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Harsh Dave, Student, Centennial College
+    
+    Date First Modified: Apr 3, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: Checks of two objects collide.
+    Revision History: Methods created for all level
+                      Level three methods revised
+*/
+
 module managers {
     export class Scoreboard {
         // PRIVATE INSTANCE VARIABLES

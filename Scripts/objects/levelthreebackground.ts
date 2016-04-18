@@ -1,3 +1,16 @@
+/* 
+    Source File: Harsh Dave - Skywars/ gamebackground.ts
+    Author's name: Harsh Dave, student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: level three background
+    Revision History: minor changes
+*/
+
 module objects {
     export class LevelThreeBackground extends objects.GameObject {
         //PRIVATE INSTANCE VARIABLES

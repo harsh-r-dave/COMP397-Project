@@ -1,3 +1,15 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ play.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: Level three scene where gameplay takes action.
+    Revision History: UI updated
+*/
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -33,7 +45,7 @@ var scenes;
             // instantiate enemy collection
             this._enemyCollection = new Array("Enemy1", "Enemy2", "Enemy3", "Enemy4", "Enemy5", "Enemy6", "Enemy7");
             // set enemy count
-            this._enemyCount = 3;
+            this._enemyCount = 4;
             // instantiate enemy array
             this._enemy = new Array();
             // add space background image to the scene

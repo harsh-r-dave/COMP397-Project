@@ -1,3 +1,16 @@
+/* 
+    Source File: Harsh Dave - Skywars/ cloud.ts
+    Author's name: Harsh Dave, Student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: level three obstacles
+    Revision History: updated variable values for scrolling
+*/
+
 module objects {
     // OBSTACLES CLASS ++++++++++++++++++++++++++++++++++++
     export class Obstacles extends objects.GameObject {

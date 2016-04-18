@@ -1,3 +1,16 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ play.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Harsh Dave, Student, Centennial College
+    
+    Date First Modified: Apr 5, 2016
+    Date Last  Modified: Apr 5, 2016
+    Last Modified by: Harsh Dave, student, Centennial College
+    
+    Program Description: Level one scene where gameplay takes action.
+    Revision History: UI updated
+*/
+
 module scenes {
     export class LevelOne extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++

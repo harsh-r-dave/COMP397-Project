@@ -1,3 +1,15 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ end.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Anjali MAcwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: Level two % three intermediate scene
+    Revision History: UI updated
+*/
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }

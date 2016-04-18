@@ -1,4 +1,19 @@
-﻿/// <reference path = "_reference.ts" />
+﻿/* 
+    Source File: COMP397-W2016-MailPilotDemo-master/ game.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Harsh Dave, Student, Centennial College
+    
+    Date First Modified: Apr 3, 2016
+    Date Last  Modified: Apr 18, 2016
+    Last Modified by: Harsh Dave, student, Centennial College
+    
+    Program Description: Contains assets and other required features needed during game play.
+    Revision History: updated assets
+                      scenes created
+                      updated assets
+*/
+
+/// <reference path = "_reference.ts" />
 
 // global variables
 var assets: createjs.LoadQueue;

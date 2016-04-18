@@ -1,3 +1,16 @@
+/* 
+    Source File: Harsh Dave - Skywars/ player.ts
+    Author's name: Harsh Dave, student, Centennial College
+    Modified by: Harsh Dave, Student, Centennial College
+    
+    Date First Modified: Apr 5, 2016
+    Date Last  Modified: Apr 5, 2016
+    Last Modified by: Harsh Dave, student, Centennial College
+    
+    Program Description: level one player
+    Revision History: minor changes
+*/
+
 module objects {
     export class LevelOnePlayer extends createjs.Bitmap {
         // PRIVATE INSTANCE VARIABLES

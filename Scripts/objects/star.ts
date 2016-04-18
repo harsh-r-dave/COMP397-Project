@@ -1,3 +1,16 @@
+/* 
+    Source File: Harsh Dave - Skywars/ star.ts
+    Author's name: Harsh Dave, student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: super class for game objects.
+    Revision History: minor changes
+*/
+
 module objects {
     // STAR CLASS ++++++++++++++++++++++++++++++++++++
     export class Star extends objects.GameObject {

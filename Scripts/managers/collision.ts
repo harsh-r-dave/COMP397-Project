@@ -1,14 +1,14 @@
 /* 
     Source File: COMP397-W2016-MailPilotDemo-master/ collision.ts
     Author's name: Tom Tsiliopoulos, Professor, Centennial College
-    Modified by: Harsh Dave, Student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
     
-    Date First Modified: Mar 24, 2016
-    Date Last  Modified: Mar 24, 2016
-    Last Modified by: Harsh Dave, student, Centennial College
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
     
     Program Description: Checks of two objects collide.
-    Revision History: check method updated - Mar 24, 2016
+    Revision History: check method updated
 */
 
 module managers {

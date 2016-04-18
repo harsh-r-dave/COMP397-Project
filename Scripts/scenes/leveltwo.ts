@@ -1,3 +1,16 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ play.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Viranch Shah, Student, Centennial College
+    
+    Date First Modified: Apr 6, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Viranch Shah, student, Centennial College
+    
+    Program Description: Level two scene where gameplay takes action.
+    Revision History: UI updated
+*/
+
 module scenes {
     export class LevelTwo extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++

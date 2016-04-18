@@ -1,3 +1,15 @@
+/*
+    Source File: Harsh Dave - Skywars/ bullet.ts
+    Author's name: Harsh Dave, student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: level three weapon
+    Revision History: minor changes
+*/
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }

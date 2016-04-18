@@ -1,3 +1,16 @@
+/* 
+    Source File: COMP397-W2016-MailPilotDemo-master/ cloud.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Viranch Shah, Student, Centennial College
+    
+    Date First Modified: Apr 8, 2016
+    Date Last  Modified: Apr 8, 2016
+    Last Modified by: Viranch Shah, student, Centennial College
+    
+    Program Description: Level two enemy
+    Revision History: updated variable values for scrolling
+*/
+
 module objects {
     export class LevelTwoEnemy extends objects.GameObject {
         // PRIVATE INSTANCE VARIABLES +++++++++++++++++

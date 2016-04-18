@@ -1,3 +1,16 @@
+/* 
+    Source File: Harsh Dave - Skywars/ bullet.ts
+    Author's name: Harsh Dave, student, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 15, 2016
+    Date Last  Modified: Apr 15, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: level three weapon
+    Revision History: minor changes
+*/
+
 module objects {
     // BULLET CLASS ++++++++++++++++++++++++++++++
     export class Bullet extends createjs.Bitmap {

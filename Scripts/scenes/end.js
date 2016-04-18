@@ -1,9 +1,21 @@
+/*
+    Source File: COMP397-W2016-MailPilotDemo-master/ end.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Anjali Macwan, Student, Centennial College
+    
+    Date First Modified: Apr 16, 2016
+    Date Last  Modified: Apr 16, 2016
+    Last Modified by: Anjali Macwan, student, Centennial College
+    
+    Program Description: Game over scene
+    Revision History: UI updated
+*/
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// LEFT_CAVE SCENE
+// GAME OVER SCENE
 var scenes;
 (function (scenes) {
     var End = (function (_super) {

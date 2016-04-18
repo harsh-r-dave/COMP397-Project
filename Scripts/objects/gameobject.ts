@@ -1,3 +1,16 @@
+/* 
+    Source File: COMP397-W2016-MailPilotDemo-master/ gameobject.ts
+    Author's name: Tom Tsiliopoulos, Professor, Centennial College
+    Modified by: Harsh Dave, Student, Centennial College
+    
+    Date First Modified: Apr 3, 2016
+    Date Last  Modified: Apr 5, 2016
+    Last Modified by: Harsh Dave, student, Centennial College
+    
+    Program Description: super class for game objects.
+    Revision History: updated variable values for scrolling
+*/
+
 module objects {
     // GAMEOBJECT SUPER CLASS ++++++++++++++++++++++++++++++
     export class GameObject extends createjs.Bitmap {
