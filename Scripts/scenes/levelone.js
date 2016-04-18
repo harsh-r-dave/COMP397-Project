@@ -53,7 +53,9 @@ var scenes;
             // check if enemies are overlapping
             if ((this._enemyOne.y >= this._enemyTwo.y && this._enemyOne.y <= (this._enemyTwo.y + this._enemyTwo.height)) ||
                 (this._enemyOne.y + this._enemyOne.height) >= this._enemyTwo.y && (this._enemyOne.y + this._enemyOne.height) <= (this._enemyTwo.y + this._enemyTwo.height)) {
-                if (this._enemyOne.x >= 0 && this._enemyOne.x <= 640) {
+                if ((this._enemyOne.x >= 0 && this._enemyOne.x <= 640) ||
+                    ((this._enemyOne.x + this._enemyOne.width) >= 0 && (this._enemyOne.x + this._enemyOne.width) <= 640)) {
+                    // put enemy two at different place
                     this._enemyTwo.x = -this._enemyTwo.width - 10;
                     this._enemyTwo.y = this._enemyTwo.y - 100;
                     // check if enemy goes out of the play area after repositioning
@@ -63,6 +65,7 @@ var scenes;
                     }
                 }
                 else {
+                    // put enemy two at different place
                     this._enemyOne.x = -this._enemyOne.width - 10;
                     this._enemyOne.y = this._enemyOne.y - 100;
                     // check if enemy goes out of the play area after repositioning

@@ -14,7 +14,7 @@ module objects {
         protected _checkBounds(value: number): void {
             // check to see if the enemy met the reset criteria
             if (this.x >= value) {
-                this._reset(this._leftBounds);
+                this._reset(this._leftBounds - 50);
             }
         }
 

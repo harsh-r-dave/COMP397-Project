@@ -18,7 +18,7 @@ var objects;
         LevelOneEnemy.prototype._checkBounds = function (value) {
             // check to see if the enemy met the reset criteria
             if (this.x >= value) {
-                this._reset(this._leftBounds);
+                this._reset(this._leftBounds - 50);
             }
         };
         // reset the enemy offscreen
