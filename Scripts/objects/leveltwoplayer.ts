@@ -38,7 +38,7 @@ module objects {
 
             this.x = 550;
             
-            this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
+            //this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
             
             this._assignControls();
 

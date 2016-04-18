@@ -37,7 +37,7 @@ module objects {
 
             this.x = 580;
             this._assignControls();
-            this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
+            //this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
         }
 
         // PRIVATE METHODS
@@ -123,8 +123,8 @@ module objects {
             this.y += 5;
         }
         
-        public engineOff(): void {
+        /*public engineOff(): void {
             this._engineSound.stop();
-        }
+        }*/
     }
 }

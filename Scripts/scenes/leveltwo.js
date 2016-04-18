@@ -32,6 +32,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         LevelTwo.prototype.start = function () {
+            // add sound to the scene
+            this._levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 1, 0);
             //Add sea
             this._sea = new objects.Sea();
             this.addChild(this._sea);
@@ -64,14 +66,16 @@ var scenes;
             // check target and change scene if target fulfilled
             if (this.target >= 15) {
                 // change scene
-                this._playerleveltwo.levelTwoEngineSound.stop();
+                //this._playerleveltwo.levelTwoEngineSound.stop();
+                this._levelTwoEngineSound.stop(); // edited
                 scene = config.Scene.LEVELTWOEND;
                 changeScene();
             }
             //check lives
             if (this.lives <= 0) {
                 // change scene
-                this._playerleveltwo.levelTwoEngineSound.stop();
+                //this._playerleveltwo.levelTwoEngineSound.stop();
+                this._levelTwoEngineSound.stop(); // edited
                 scene = config.Scene.LEVELTWOLOSE;
                 changeScene();
             }

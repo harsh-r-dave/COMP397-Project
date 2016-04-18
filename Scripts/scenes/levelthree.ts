@@ -17,7 +17,7 @@ module scenes {
         private _lavelThreeLabel: objects.Label;
         private _backButton: objects.Button;
         private _nextButton: objects.Button;
-
+        private _engineSound: createjs.AbstractSoundInstance;
 
         private _space: objects.GameBackground;
 
@@ -42,6 +42,7 @@ module scenes {
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
+            this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
         }
 
         // PUBLIC METHODS +++++++++++++++++++++
@@ -242,7 +243,8 @@ module scenes {
 
             // check if life becomes 0
             if (scoreboard.getLives() < 1) {
-                this._player.engineOff();
+                //this._player.engineOff();
+                this._engineSound.stop();
                 scene = config.Scene.LEVELTHREELOSE;
                 changeScene();
             }
@@ -254,6 +256,8 @@ module scenes {
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
 
             if (scoreboard.getScore() >= 3000) {
+                //this._player.engineOff();
+                this._engineSound.stop();
                 scene = config.Scene.END;
                 changeScene();
             }

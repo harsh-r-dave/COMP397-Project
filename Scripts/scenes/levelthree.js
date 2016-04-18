@@ -22,6 +22,7 @@ var scenes;
         // CONSTRUCTOR ++++++++++++++++++++++
         function LevelThree() {
             _super.call(this);
+            this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         LevelThree.prototype.start = function () {
@@ -186,7 +187,8 @@ var scenes;
             this._updateScore();
             // check if life becomes 0
             if (scoreboard.getLives() < 1) {
-                this._player.engineOff();
+                //this._player.engineOff();
+                this._engineSound.stop();
                 scene = config.Scene.LEVELTHREELOSE;
                 changeScene();
             }
@@ -196,6 +198,8 @@ var scenes;
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
             if (scoreboard.getScore() >= 3000) {
+                //this._player.engineOff();
+                this._engineSound.stop();
                 scene = config.Scene.END;
                 changeScene();
             }

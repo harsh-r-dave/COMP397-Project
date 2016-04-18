@@ -30,7 +30,7 @@ var objects;
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
             this.x = 580;
             this._assignControls();
-            this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
+            //this._engineSound = createjs.Sound.play("Engine", 0, 0, 0, -1, 1, 0);
         }
         // PRIVATE METHODS
         Player.prototype._checkBounds = function () {
@@ -102,9 +102,6 @@ var objects;
         // Move Down Method
         Player.prototype.moveDown = function () {
             this.y += 5;
-        };
-        Player.prototype.engineOff = function () {
-            this._engineSound.stop();
         };
         return Player;
     })(createjs.Bitmap);

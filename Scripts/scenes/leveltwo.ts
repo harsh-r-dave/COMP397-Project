@@ -25,6 +25,8 @@ module scenes {
         private _delay: number;
 
         private _collision: managers.LevelTwoCollision;
+        // edited to fix sound bug
+        private _levelTwoEngineSound: createjs.AbstractSoundInstance;
         
         //PUBLIC INSTANCE
         public target: number;
@@ -48,6 +50,9 @@ module scenes {
         
         // Start Method
         public start(): void {
+            // add sound to the scene
+            this._levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 1, 0);
+            
             //Add sea
             this._sea = new objects.Sea();
             this.addChild(this._sea);
@@ -88,7 +93,8 @@ module scenes {
             // check target and change scene if target fulfilled
             if (this.target >= 15) {
                 // change scene
-                this._playerleveltwo.levelTwoEngineSound.stop();
+                //this._playerleveltwo.levelTwoEngineSound.stop();
+                this._levelTwoEngineSound.stop();   // edited
                 scene = config.Scene.LEVELTWOEND;
                 changeScene();
             }
@@ -96,7 +102,8 @@ module scenes {
             //check lives
             if (this.lives <= 0){
                 // change scene
-                this._playerleveltwo.levelTwoEngineSound.stop();
+                //this._playerleveltwo.levelTwoEngineSound.stop();
+                this._levelTwoEngineSound.stop();   // edited
                 scene = config.Scene.LEVELTWOLOSE;
                 changeScene();                
             }

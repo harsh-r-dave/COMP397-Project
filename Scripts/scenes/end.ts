@@ -38,14 +38,8 @@ module scenes {
         
         // Start Method
         public start(): void {
-            //Add Menu Label
-           /* this._endLabel = new objects.Label(
-                "END SCENE", "60px Consolas",
-                "#000000",
-                config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
-            this.addChild(this._endLabel);
-            */
-            
+            //Add Sound to the scene
+            createjs.Sound.play("GameWin", 0, 0, 0, 1, 1, 0);
             
             // add the BACK button to the OVER scene
             this._restartButton = new objects.Button(
