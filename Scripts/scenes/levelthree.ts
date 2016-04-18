@@ -17,8 +17,8 @@ module scenes {
         private _lavelThreeLabel: objects.Label;
         private _backButton: objects.Button;
         private _nextButton: objects.Button;
-        
-      
+
+
         private _space: objects.GameBackground;
 
         private _obstacles: objects.Obstacles[];
@@ -34,39 +34,39 @@ module scenes {
         private _bullet: objects.Bullet;
 
         private _collision: managers.Collision;
-        
-        
+
+
         private _scoreLabel: objects.Label;
         private _livesLabel: objects.Label;
-        
+
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
             super();
         }
-        
+
         // PUBLIC METHODS +++++++++++++++++++++
-        
-         public start(): void {
-             
-             //Add Level One Label
+
+        public start(): void {
+
+            //Add Level One Label
             /* this._lavelThreeLabel = new objects.Label(
                 "Level 3 SCENE", "60px Consolas",
                 "#000000",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
             this.addChild(this._lavelThreeLabel);
             */
-            
+
             // reset scoreboard
             scoreboard.setLives(100);
             scoreboard.setScore(0);
 
             // instantiate obstacles collection
-           /* this._obstaclesCollection = new Array("Planet1", "Planet2", "Planet3", "Planet4", "Stone1", "Stone2");
-            // set obstacles count
-            this._obstaclesCount = 2;
-            // instantiate obstacles array
-            this._obstacles = new Array<objects.Obstacles>();
-            */
+            /* this._obstaclesCollection = new Array("Planet1", "Planet2", "Planet3", "Planet4", "Stone1", "Stone2");
+             // set obstacles count
+             this._obstaclesCount = 2;
+             // instantiate obstacles array
+             this._obstacles = new Array<objects.Obstacles>();
+             */
 
             // instantiate enemy collection
             this._enemyCollection = new Array("Enemy1", "Enemy2", "Enemy3", "Enemy4", "Enemy5", "Enemy6", "Enemy7");
@@ -80,7 +80,7 @@ module scenes {
             this.addChild(this._space);
 
             // add obstacle to the scene
-           for (var obstacle: number = 0; obstacle < this._obstaclesCount; obstacle++) {
+            for (var obstacle: number = 0; obstacle < this._obstaclesCount; obstacle++) {
                 var randomObstacle = Math.floor(Math.random() * 6);
 
                 this._obstacles[obstacle] = new objects.Obstacles(this._obstaclesCollection[randomObstacle]);
@@ -99,15 +99,15 @@ module scenes {
             this._star = new objects.Star();
             this.addChild(this._star);
 
+            // add player to the scene
+            this._player = new objects.Player();
+            this.addChild(this._player);
+
             // add bullet to the scene
             this._bullet = new objects.Bullet();
             this.addChild(this._bullet);
             // set bullet location
             this._bullet.setBulletPoisition(this._player.x, this._player.y);
-            
-            // add player to the scene
-            this._player = new objects.Player();
-            this.addChild(this._player);
 
             // add collision manager to the scene
             this._collision = new managers.Collision(this._player);
@@ -119,7 +119,7 @@ module scenes {
             // Lives Label
             this._livesLabel = new objects.Label("Health: ", "30px Frijole", "#FFFF00", 350, 5, false);
             this.addChild(this._livesLabel);
-            
+
             // add the Back button to the MENU scene
             /*this._backButton = new objects.Button(
                 "LevelTwoButton",
@@ -137,10 +137,10 @@ module scenes {
                 config.Screen.CENTER_Y + 180, false);
             this.addChild(this._nextButton);
             */
-            
+
             // Next Button event listener
-           // this._nextButton.on("click", this._nextButtonClick, this);
-            
+            // this._nextButton.on("click", this._nextButtonClick, this);
+
             // add this scene to the global stage container
             stage.addChild(this);
 
@@ -204,15 +204,15 @@ module scenes {
             this._player.update();      // update player
 
             // check if obstacle is colliding with bullet
-           /* for (var obstacle = 0; obstacle < this._obstaclesCount; obstacle++) {
-                this.checkBulletCollision(this._obstacles[obstacle], obstacle);
-            }*/
-            
+            /* for (var obstacle = 0; obstacle < this._obstaclesCount; obstacle++) {
+                 this.checkBulletCollision(this._obstacles[obstacle], obstacle);
+             }*/
+
             // check if obstacles are colliding with player and update it
-           /* this._obstacles.forEach(obstacle => {
-                this._collision.check(obstacle);
-                obstacle.update();
-            }); */
+            /* this._obstacles.forEach(obstacle => {
+                 this._collision.check(obstacle);
+                 obstacle.update();
+             }); */
 
             // check if enemy is colliding with bullet
             for (var enemy = 0; enemy < this._enemyCount; enemy++) {
@@ -252,29 +252,28 @@ module scenes {
         private _updateScore(): void {
             this._scoreLabel.text = "Score: " + scoreboard.getScore();
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
-            
-            if(scoreboard.getScore()>=3000)
-            {
-                scene=config.Scene.END;
+
+            if (scoreboard.getScore() >= 3000) {
+                scene = config.Scene.END;
                 changeScene();
             }
         }
-        
+
         //EVENT HANDLERS ++++++++++++++++++++
-        
+
         // PLAY Button click event handler
-       /* private _backButtonClick(event: createjs.MouseEvent) {
-            // Switch to the THREE Scene
-            scene = config.Scene.LEVELTWO;
-            changeScene();
-        }
-        
-        // INSTRUCTIONS Button click event handler
-        private _nextButtonClick(event: createjs.MouseEvent) {
-            // Switch to the END Scene
-            scene = config.Scene.END;
-            changeScene();
-        }
-        */
+        /* private _backButtonClick(event: createjs.MouseEvent) {
+             // Switch to the THREE Scene
+             scene = config.Scene.LEVELTWO;
+             changeScene();
+         }
+         
+         // INSTRUCTIONS Button click event handler
+         private _nextButtonClick(event: createjs.MouseEvent) {
+             // Switch to the END Scene
+             scene = config.Scene.END;
+             changeScene();
+         }
+         */
     }
 }

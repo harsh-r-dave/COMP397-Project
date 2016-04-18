@@ -66,14 +66,14 @@ var scenes;
             // add star to the scene
             this._star = new objects.Star();
             this.addChild(this._star);
+            // add player to the scene
+            this._player = new objects.Player();
+            this.addChild(this._player);
             // add bullet to the scene
             this._bullet = new objects.Bullet();
             this.addChild(this._bullet);
             // set bullet location
             this._bullet.setBulletPoisition(this._player.x, this._player.y);
-            // add player to the scene
-            this._player = new objects.Player();
-            this.addChild(this._player);
             // add collision manager to the scene
             this._collision = new managers.Collision(this._player);
             // Score Label
