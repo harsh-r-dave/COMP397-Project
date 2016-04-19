@@ -38,6 +38,7 @@ var levelTwoLose;
 var levelThreeLose;
 var assetData = [
     // Add your Assets here
+    { id: "GameTrack", src: "../../Assets/audio/Gametrack.mp3" },
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },
     { id: "Instructions", src: "../../Assets/images/instructions.jpg" },
     { id: "Desert", src: "../../Assets/images/desert.jpg" },

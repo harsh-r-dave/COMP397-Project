@@ -43,6 +43,7 @@ var levelThreeLose: scenes.LevelThreeLose;
 
 var assetData: objects.Asset[] = [
     // Add your Assets here
+    { id: "GameTrack", src: "../../Assets/audio/Gametrack.mp3" },          // gametrack
     { id: "Menu_bg", src: "../../Assets/images/menu_bg.jpg" },          // menu screen - background images
     { id: "Instructions", src: "../../Assets/images/instructions.jpg" },          // instruction s screen - background images
     { id: "Desert", src: "../../Assets/images/desert.jpg" },            // level one - background

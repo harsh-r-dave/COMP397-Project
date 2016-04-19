@@ -27,6 +27,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Menu.prototype.start = function () {
+            // play game track
+            this._gameTrack = createjs.Sound.play("GameTrack", 0, 0, 0, -1, 0.5, 0);
             // Add background to the scene
             this._background = new createjs.Bitmap(assets.getResult("Menu_bg"));
             this.addChild(this._background);
@@ -58,12 +60,14 @@ var scenes;
         // PLAY Button click event handler
         Menu.prototype._playButtonClick = function (event) {
             // Switch to the PLAY LEVEL - 1 Scene
+            this._gameTrack.stop();
             scene = config.Scene.LEVELONE;
             changeScene();
         };
         // INSTRUCTIONS Button click event handler
         Menu.prototype._instructionsButtonClick = function (event) {
             // Switch to the INSTRUCTIONS Scene
+            this._gameTrack.stop();
             scene = config.Scene.INSTRUCTIONS;
             changeScene();
         };

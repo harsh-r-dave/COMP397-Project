@@ -20,6 +20,7 @@ module scenes {
         private _playButton: objects.Button;
         private _instructions: objects.Button;
         private _closeButton: objects.Button;
+        private _gameTrack: createjs.AbstractSoundInstance;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -30,6 +31,9 @@ module scenes {
         
         // Start Method
         public start(): void {
+            // play game track
+            this._gameTrack = createjs.Sound.play("GameTrack", 0, 0, 0, -1, 0.5, 0);
+            
             // Add background to the scene
             this._background = new createjs.Bitmap(assets.getResult("Menu_bg"));
             this.addChild(this._background);
@@ -86,6 +90,7 @@ module scenes {
         // PLAY Button click event handler
         private _playButtonClick(event: createjs.MouseEvent) {
             // Switch to the PLAY LEVEL - 1 Scene
+            this._gameTrack.stop();
             scene = config.Scene.LEVELONE;
             changeScene();
         }
@@ -93,6 +98,7 @@ module scenes {
         // INSTRUCTIONS Button click event handler
         private _instructionsButtonClick(event: createjs.MouseEvent) {
             // Switch to the INSTRUCTIONS Scene
+            this._gameTrack.stop();
             scene = config.Scene.INSTRUCTIONS;
             changeScene();
         }
