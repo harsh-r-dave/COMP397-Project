@@ -26,6 +26,8 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Instructions.prototype.start = function () {
+            // play game track
+            this._gameTrack = createjs.Sound.play("GameTrack", 0, 0, 0, -1, 0.5, 0);
             // add instructions image to the scene
             this._instructionsImage = new createjs.Bitmap(assets.getResult("Instructions"));
             this.addChild(this._instructionsImage);
@@ -44,6 +46,7 @@ var scenes;
         // PLAY Button click event handler
         Instructions.prototype._buttonClick = function (event) {
             // Switch to the PLAY LEVEL - 1 Scene
+            this._gameTrack.stop();
             scene = config.Scene.MENU;
             changeScene();
         };

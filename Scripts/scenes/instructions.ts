@@ -16,6 +16,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _instructionsImage : createjs.Bitmap;
         private _button: objects.Button;
+        private _gameTrack: createjs.AbstractSoundInstance;
 
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -26,6 +27,9 @@ module scenes {
 
         // Start Method
         public start(): void {
+            // play game track
+            this._gameTrack = createjs.Sound.play("GameTrack", 0, 0, 0, -1, 0.5, 0);
+            
             // add instructions image to the scene
             this._instructionsImage = new createjs.Bitmap(assets.getResult("Instructions"));
             this.addChild(this._instructionsImage);
@@ -55,6 +59,7 @@ module scenes {
         // PLAY Button click event handler
         private _buttonClick(event: createjs.MouseEvent) {
             // Switch to the PLAY LEVEL - 1 Scene
+            this._gameTrack.stop();
             scene = config.Scene.MENU;
             changeScene();
         }
