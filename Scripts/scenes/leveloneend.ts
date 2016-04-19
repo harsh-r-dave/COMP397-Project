@@ -71,7 +71,7 @@ module scenes {
                 "   You have collected enough fuel \n           for the spaceship !! \nFly over the ocean and reach \n          till the space...\n          collect ammo.....",
                 "20px Frijole",
                 "#000000",
-                config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
+                config.Screen.CENTER_X, config.Screen.CENTER_Y, true);
             this.addChild(this._instructionsLabel);
             this._instructionsLabel.visible = false;
 
