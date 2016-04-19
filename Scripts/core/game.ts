@@ -5,11 +5,12 @@
     
     Date First Modified: Apr 3, 2016
     Date Last  Modified: Apr 18, 2016
-    Last Modified by: Harsh Dave, student, Centennial College
+    Last Modified by: Viranch Shah, student, Centennial College
     
     Program Description: Contains assets and other required features needed during game play.
     Revision History: updated assets
                       scenes created
+                      updated assets
                       updated assets
 */
 
@@ -53,6 +54,7 @@ var assetData: objects.Asset[] = [
     { id: "Fuel", src: "../../Assets/images/gas.png" },                         // level one - collector
     { id: "sea", src: "../../Assets/images/sea.jpg" },                          // level two - sea
     { id: "island", src: "../../Assets/images/island.png" },                    // level two - island
+    { id: "ammo", src: "../../Assets/images/ammo.png" },                    // level two - ammo
     { id: "player_level2", src: "../../Assets/images/player_level2.png" },      // level two - player
     { id: "LevelTwoEnemy1", src: "../../Assets/images/level2_enemy1.png" },            // level two - enemy
     { id: "LevelTwoEnemy2", src: "../../Assets/images/level2_enemy2.png" },            // level two - enemy

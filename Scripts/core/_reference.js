@@ -14,6 +14,7 @@
 /// <reference path="../objects/levelonecollector.ts" />
 /// <reference path="../objects/sea.ts" />
 /// <reference path="../objects/island.ts" />
+/// <reference path="../objects/ammo.ts" />
 /// <reference path="../objects/leveltwoplayer.ts" />
 /// <reference path="../objects/leveltwoenemy.ts" />
 /// <reference path="../objects/gamebackground.ts" />

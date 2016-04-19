@@ -41,6 +41,11 @@ var managers;
                             levelTwo.lives = levelTwo.lives - 1;
                             createjs.Sound.play("LevelTwoCrash", 0, 0, 0, 0, 0.5, 0);
                             break;
+                        case "ammo":
+                            object.visible = false;
+                            levelTwo.ammo = levelTwo.ammo + 1;
+                            console.log("ammo");
+                            break;
                     }
                     object.setIsColliding(true);
                 }

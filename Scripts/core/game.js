@@ -5,11 +5,12 @@
     
     Date First Modified: Apr 3, 2016
     Date Last  Modified: Apr 18, 2016
-    Last Modified by: Harsh Dave, student, Centennial College
+    Last Modified by: Viranch Shah, student, Centennial College
     
     Program Description: Contains assets and other required features needed during game play.
     Revision History: updated assets
                       scenes created
+                      updated assets
                       updated assets
 */
 /// <reference path = "_reference.ts" />
@@ -48,6 +49,7 @@ var assetData = [
     { id: "Fuel", src: "../../Assets/images/gas.png" },
     { id: "sea", src: "../../Assets/images/sea.jpg" },
     { id: "island", src: "../../Assets/images/island.png" },
+    { id: "ammo", src: "../../Assets/images/ammo.png" },
     { id: "player_level2", src: "../../Assets/images/player_level2.png" },
     { id: "LevelTwoEnemy1", src: "../../Assets/images/level2_enemy1.png" },
     { id: "LevelTwoEnemy2", src: "../../Assets/images/level2_enemy2.png" },

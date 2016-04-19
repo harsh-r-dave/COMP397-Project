@@ -68,7 +68,7 @@ module scenes {
 
             // add instructions label to the scene
             this._instructionsLabel = new objects.Label(
-                "   You have collected enough MO \n           for the spaceship !! \nNow battle hard in the space  \n          and kill all the enemies..!!",
+                "   You have collected enough Ammo \n           for the spaceship !! \nNow battle hard in the space  \n          and kill all the enemies..!!",
                 "20px Frijole",
                 "white",
                 config.Screen.CENTER_X, config.Screen.CENTER_Y - 20, true);
