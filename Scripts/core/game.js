@@ -96,6 +96,7 @@ var assetData = [
     { id: "Collect", src: "../../Assets/audio/Collect.mp3" },
     { id: "Crash", src: "../../Assets/audio/Crash.mp3" },
     { id: "BulletCrash", src: "../../Assets/audio/BulletCrash.mp3" },
+    { id: "AmmoSound", src: "../../Assets/audio/ammo.mp3" },
     { id: "Instructions", src: "../../Assets/images/instructions.jpg" },
     { id: "PlayNow", src: "../../Assets/images/playNow.png" },
     { id: "Help", src: "../../Assets/images/help.png" },

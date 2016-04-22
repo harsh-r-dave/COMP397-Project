@@ -101,6 +101,7 @@ var assetData: objects.Asset[] = [
     { id: "Collect", src: "../../Assets/audio/Collect.mp3" },               // play scene - star collect sound
     { id: "Crash", src: "../../Assets/audio/Crash.mp3" },                   // play scene - obstacle collide with player
     { id: "BulletCrash", src: "../../Assets/audio/BulletCrash.mp3" },       // play scene - bullet collide with enemy
+    { id: "AmmoSound", src: "../../Assets/audio/ammo.mp3" },       // play scene - ammo collide with enemy
     { id: "Instructions", src: "../../Assets/images/instructions.jpg" },    // instructions scene - background
     { id: "PlayNow", src: "../../Assets/images/playNow.png" },              // menu scene - PlayNow button
     { id: "Help", src: "../../Assets/images/help.png" },                    // menu scene - Help button

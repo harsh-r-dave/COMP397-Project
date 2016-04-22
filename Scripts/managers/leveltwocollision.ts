@@ -54,6 +54,7 @@ module managers {
                             object.visible = false;
                             levelTwo.ammo = levelTwo.ammo + 1;
                             console.log("ammo");
+                            createjs.Sound.play("AmmoSound", 0, 0, 0, 0, 0.5, 0);
                             break;
                     }
                     object.setIsColliding(true);

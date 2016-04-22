@@ -33,6 +33,7 @@ module objects {
             this.visible = true;
             // behaviour of objects
             this._speed.x = 6;
+            this._speed.y = 0.5;
             
             // location of objects
             this.y = Math.floor(Math.random() * this._bottomBounds);
@@ -44,6 +45,7 @@ module objects {
         public update(): void {
             // scroll the star
             this.x += this._speed.x;
+            this.y += this._speed.y;
             this._checkBounds(this._rightBounds);
         }
     }
