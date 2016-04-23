@@ -48,8 +48,11 @@ var objects;
             if (this._oldY < this.y) {
                 this.rotation = -10;
             }
-            if (this._oldY > this.y) {
+            else if (this._oldY > this.y) {
                 this.rotation = +10;
+            }
+            else {
+                this.rotation = 0;
             }
             this._oldY = this.y;
         };

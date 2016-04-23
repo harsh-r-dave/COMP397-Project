@@ -76,7 +76,7 @@ var scenes;
         // level 2 Scene updates here
         LevelTwo.prototype.update = function () {
             // check target and change scene if target fulfilled
-            if (this.target >= 15) {
+            if (this.target >= 120) {
                 // change scene
                 //this._playerleveltwo.levelTwoEngineSound.stop();
                 this._levelTwoEngineSound.stop(); // edited
@@ -121,7 +121,7 @@ var scenes;
                 if (this.target % 2 == 0) {
                     this._sea.alpha -= 0.01;
                 }
-                // increase darkness after 50KMs at every KMs
+                // increase darkness after 50KMs at every 2 KMs
                 if (this.target > 50) {
                     if (this.target % 2 == 0) {
                         this._levelThreeBackground.alpha += 0.01;

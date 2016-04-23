@@ -195,9 +195,9 @@ var scenes;
         };
         // method to update scoreboard
         LevelThree.prototype._updateScore = function () {
-            this._scoreLabel.text = "Score: " + scoreboard.getScore();
+            this._scoreLabel.text = "Score: " + scoreboard.getScore() + "/5000";
             this._livesLabel.text = "Health: " + scoreboard.getLives() + "%";
-            if (scoreboard.getScore() >= 3000) {
+            if (scoreboard.getScore() >= 5000) {
                 //this._player.engineOff();
                 this._engineSound.stop();
                 scene = config.Scene.END;

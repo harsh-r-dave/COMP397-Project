@@ -106,7 +106,7 @@ var scenes;
                 changeScene();
             }
             // check for player's target and change scene
-            if (scoreboard.getLevelOneTarget() >= 1000) {
+            if (scoreboard.getLevelOneTarget() >= 2500) {
                 this._engineSound.stop();
                 scene = config.Scene.LEVELONEEND;
                 changeScene();

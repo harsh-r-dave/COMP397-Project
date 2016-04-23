@@ -23,7 +23,7 @@ module objects {
         public width: number;
         public height: number;
         public levelTwoEngineSound: createjs.AbstractSoundInstance;
-        
+
         constructor() {
             super(assets.getResult("player_level2"));
 
@@ -37,9 +37,9 @@ module objects {
             this._bottomBounds = config.Screen.HEIGHT - (this.height * 0.5);
 
             this.x = 550;
-            
+
             //this.levelTwoEngineSound = createjs.Sound.play("SpaceShipSound", 0, 0, 0, -1, 0.5, 0);
-            
+
             this._assignControls();
 
         }
@@ -56,20 +56,23 @@ module objects {
             }
 
         }
-        
+
         //for check mouse movement direction
-        private _checkMouseDirection(): void{
-            if (this._oldY < this.y){
+        private _checkMouseDirection(): void {
+            if (this._oldY < this.y) {
                 this.rotation = -10;
             }
-            if (this._oldY > this.y){
+            else if (this._oldY > this.y) {
                 this.rotation = +10;
+            } 
+            else {
+                this.rotation = 0;
             }
             this._oldY = this.y;
 
         }
 
-        
+
         //PUBLIC METHODS
         public update(): void {
             if (controls.UP == true || controls.DOWN == true) {
@@ -78,13 +81,13 @@ module objects {
                 stage.mouseY = this.y;      // change mouseY to move player with keyboard
             }
             else {
-             this.y = stage.mouseY;   
+                this.y = stage.mouseY;
             }
             this._checkBounds();
             this._checkMouseDirection();
 
         }
-        
+
         // Bind key actions to player events
         private _assignControls() {
             window.onkeydown = this._onControlDown;
